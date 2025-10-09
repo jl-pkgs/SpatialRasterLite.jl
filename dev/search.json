@@ -174,7 +174,7 @@
     "href": "z-index.html#abstractspatraster",
     "title": "Reference",
     "section": "",
-    "text": "No documentation found for public symbol.\n\nSummary\nabstract type AbstractSpatRaster{T, N}\n\n\nSubtypes\nSpatRaster{T, N}",
+    "text": "No documentation found for public binding SpatialRasterLite.AbstractSpatRaster.\n\nSummary\nabstract type AbstractSpatRaster{T, N}\n\n\nSubtypes\nSpatRaster{T, N}",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Reference</span>"
     ]
@@ -184,7 +184,7 @@
     "href": "z-index.html#point",
     "title": "Reference",
     "section": "Point",
-    "text": "Point\n\n\n\n\n\n\nNo documentation found for public symbol.\n\nSummary\nmutable struct Point{T}\n\n\nFields\nx :: T\ny :: T\n\n\nSupertype Hierarchy\nPoint{T} &lt;: SpatialRasterLite.AbstractPoint{T} &lt;: Any",
+    "text": "Point\n\n\n\n\n\n\nNo documentation found for public binding SpatialRasterLite.Point.\n\nSummary\nmutable struct Point{T}\n\n\nFields\nx :: T\ny :: T\n\n\nSupertype Hierarchy\nPoint{T} &lt;: SpatialRasterLite.AbstractPoint{T} &lt;: Any",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Reference</span>"
     ]
@@ -194,7 +194,7 @@
     "href": "z-index.html#point3",
     "title": "Reference",
     "section": "Point3",
-    "text": "Point3\n\n\n\n\n\n\nNo documentation found for public symbol.\n\nSummary\nmutable struct Point3{T}\n\n\nFields\nx :: T\ny :: T\nz :: T\n\n\nSupertype Hierarchy\nPoint3{T} &lt;: SpatialRasterLite.AbstractPoint{T} &lt;: Any",
+    "text": "Point3\n\n\n\n\n\n\nNo documentation found for public binding SpatialRasterLite.Point3.\n\nSummary\nmutable struct Point3{T}\n\n\nFields\nx :: T\ny :: T\nz :: T\n\n\nSupertype Hierarchy\nPoint3{T} &lt;: SpatialRasterLite.AbstractPoint{T} &lt;: Any",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Reference</span>"
     ]
@@ -204,7 +204,7 @@
     "href": "z-index.html#rastersize",
     "title": "Reference",
     "section": "RasterSize",
-    "text": "RasterSize\n\n\n\n\n\n\nNo documentation found for public symbol.\n\nSummary\nmutable struct RasterSize\n\n\nFields\nb        :: bbox\ncellsize :: Tuple{Float64, Float64}\nnx       :: Int64\nny       :: Int64",
+    "text": "RasterSize\n\n\n\n\n\n\nNo documentation found for public binding SpatialRasterLite.RasterSize.\n\nSummary\nmutable struct RasterSize\n\n\nFields\nb        :: bbox\ncellsize :: Tuple{Float64, Float64}\nnx       :: Int64\nny       :: Int64",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Reference</span>"
     ]
@@ -224,7 +224,7 @@
     "href": "z-index.html#svf_azimuth",
     "title": "Reference",
     "section": "SVF_azimuth",
-    "text": "SVF_azimuth\n\n\n\n\n\n\nNo documentation found for public symbol.\nSpatialRasterLite.SVF_azimuth is a Function.\n# 1 method for generic function \"SVF_azimuth\" from SpatialRasterLite:\n [1] SVF_azimuth(Φ_sun::T, Φ_slope::T, β_slope::T, zenith_max::T) where T&lt;:Real\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/terrain/sky_view_factor.jl:5",
+    "text": "SVF_azimuth\n\n\n\n\n\n\nNo documentation found for public binding SpatialRasterLite.SVF_azimuth.\nSpatialRasterLite.SVF_azimuth is a Function.\n# 1 method for generic function \"SVF_azimuth\" from SpatialRasterLite:\n [1] SVF_azimuth(Φ_sun::T, Φ_slope::T, β_slope::T, zenith_max::T) where T&lt;:Real\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/terrain/sky_view_factor.jl:5",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Reference</span>"
     ]
@@ -234,7 +234,7 @@
     "href": "z-index.html#svf_azimuth_simple",
     "title": "Reference",
     "section": "SVF_azimuth_simple",
-    "text": "SVF_azimuth_simple\n\n\n\n\n\n\nNo documentation found for public symbol.\nSpatialRasterLite.SVF_azimuth_simple is a Function.\n# 1 method for generic function \"SVF_azimuth_simple\" from SpatialRasterLite:\n [1] SVF_azimuth_simple(zenith_max::T) where T&lt;:Real\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/terrain/sky_view_factor.jl:15",
+    "text": "SVF_azimuth_simple\n\n\n\n\n\n\nNo documentation found for public binding SpatialRasterLite.SVF_azimuth_simple.\nSpatialRasterLite.SVF_azimuth_simple is a Function.\n# 1 method for generic function \"SVF_azimuth_simple\" from SpatialRasterLite:\n [1] SVF_azimuth_simple(zenith_max::T) where T&lt;:Real\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/terrain/sky_view_factor.jl:15",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Reference</span>"
     ]
@@ -254,7 +254,7 @@
     "href": "z-index.html#spatialrasterlite",
     "title": "Reference",
     "section": "SpatialRasterLite",
-    "text": "SpatialRasterLite\n\n\n\n\n\n\nNo docstring found for public module SpatialRasterLite.\n\nPublic names\nAbstractSpatRaster, Point, Point3, RasterSize, SVF, SVF_azimuth, SVF_azimuth_simple, SpatRaster, _st_location, angle_SolarDeclination, angle_SunAzimuth, angle_SunElevation, azimuth2deg, azimuth2slope, azimuth2xy, bandnames, bbox, bbox2cellsize, bbox2dims, bbox2lims, bbox2ndim, bbox2range, bbox2vec, bbox_overlap, cellArea, cor, dLine, deg2xy, dem_angle_MaxElevation, dem_slope, direction, direction_E, direction_N, earth_dist, fliplr, flipud, gdal_info, gdal_nodata, gdal_polygonize, gdalinfo, getgeotransform, guanshan_dem, guanshan_flowdir_cpp, guanshan_flowdir_gis, in_bbox, intersect, isscalar, line_end, line_start, make_rast, median, merge_var, merge_var!, meshgrid, nband, nlayer, nlyr, ogr_info, range2bbox, rast, read_gdal, read_sf, resample_first, rm_shp, set_bandnames, st_bbox, st_cellsize, st_coords, st_crop, st_dims, st_extract, st_location, st_location_exact, st_mosaic, st_points, st_read, st_write, sun_shade, time2local, write_gdal, write_sf\n\n\nDisplaying contents of readme found at /home/runner/work/SpatialRasterLite.jl/SpatialRasterLite.jl/README.md\n\n\nSpatialRasterLite.jl: Simple Spatial Rasters in Julia\n&lt;!–  –&gt;   \n\nDongdong Kong\n\nSpatRaster is a simple spatial raster with WGS84 projection, abbreviated as rast.\nDue to its simplicity, SpatialRasterLite.jl doesn’t rely on any other geospatial packages, which makes SpatialRasterLite.jl more lightweight than GeoArrays and Rasters.jl.\nSpatialRasterLite.jl used the class and function name of R language terra and sf packages.\njulia -e \"@time using SpatialRasterLite\"\n# 0.053372 seconds (50.83 k allocations: 3.506 MiB, 8.44% compilation time)\n\nFunctions\nThis package is used to support spatial interpolations in SpatInterp.jl and MGWR.jl. They implemented: &lt;!– Interpolation (point to raster) –&gt;\n\nThin Plate Spline Interpolation (tps)\nAngular Distance Weighting Interpolation (adw)\nInverse Distance Weighting Interpolation (idw)\nNearest Interpolation (nearest)\nBilinear Interpolation\nIrregular Bilinear Interpolation, referred to pyresample\nMixed Geographically Weighted Regression\n\nTerrain\n\nSky view factor (SVF)\nsun shade\n\nmethods\n\nintersect (line & raster)",
+    "text": "SpatialRasterLite\n\n\n\n\n\n\nNo docstring found for public module SpatialRasterLite.\n\nPublic names\nAbstractSpatRaster, Point, Point3, RasterSize, SVF, SVF_azimuth, SVF_azimuth_simple, SpatRaster, _st_location, angle_SolarDeclination, angle_SunAzimuth, angle_SunElevation, azimuth2deg, azimuth2slope, azimuth2xy, bandnames, bbox, bbox2cellsize, bbox2dims, bbox2lims, bbox2ndim, bbox2range, bbox2vec, bbox_overlap, cellArea, cor, dLine, deg2xy, dem_angle_MaxElevation, dem_slope, direction, direction_E, direction_N, earth_dist, fliplr, flipud, gdal_info, gdal_nodata, gdal_polygonize, gdalinfo, getgeotransform, guanshan_dem, guanshan_flowdir_cpp, guanshan_flowdir_gis, in_bbox, intersect, isscalar, line_end, line_start, make_rast, median, merge_var, merge_var!, meshgrid, nband, nlayer, nlyr, ogr_info, range2bbox, rast, read_gdal, read_sf, resample_first, rm_shp, set_bandnames, st_bbox, st_cellsize, st_coords, st_crop, st_dims, st_extract, st_location, st_location_exact, st_mosaic, st_points, st_read, st_write, sun_shade, time2local, write_gdal, write_sf\n\nPackage description from README.md:\n\n\nSpatialRasterLite.jl: Simple Spatial Rasters in Julia\n&lt;!–  –&gt;   \n\nDongdong Kong\n\nSpatRaster is a simple spatial raster with WGS84 projection, abbreviated as rast.\nDue to its simplicity, SpatialRasterLite.jl doesn’t rely on any other geospatial packages, which makes SpatialRasterLite.jl more lightweight than GeoArrays and Rasters.jl.\nSpatialRasterLite.jl used the class and function name of R language terra and sf packages.\njulia -e \"@time using SpatialRasterLite\"\n# 0.053372 seconds (50.83 k allocations: 3.506 MiB, 8.44% compilation time)\n\nFunctions\nThis package is used to support spatial interpolations in SpatInterp.jl and MGWR.jl. They implemented: &lt;!– Interpolation (point to raster) –&gt;\n\nThin Plate Spline Interpolation (tps)\nAngular Distance Weighting Interpolation (adw)\nInverse Distance Weighting Interpolation (idw)\nNearest Interpolation (nearest)\nBilinear Interpolation\nIrregular Bilinear Interpolation, referred to pyresample\nMixed Geographically Weighted Regression\n\nTerrain\n\nSky view factor (SVF)\nsun shade\n\nmethods\n\nintersect (line & raster)",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Reference</span>"
     ]
@@ -314,7 +314,7 @@
     "href": "z-index.html#azimuth2slope",
     "title": "Reference",
     "section": "azimuth2slope",
-    "text": "azimuth2slope\n\n\n\n\n\n\nNo documentation found for public symbol.\nSpatialRasterLite.azimuth2slope is a Function.\n# 1 method for generic function \"azimuth2slope\" from SpatialRasterLite:\n [1] azimuth2slope(ψ)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/terrain/angle.jl:23",
+    "text": "azimuth2slope\n\n\n\n\n\n\nNo documentation found for public binding SpatialRasterLite.azimuth2slope.\nSpatialRasterLite.azimuth2slope is a Function.\n# 1 method for generic function \"azimuth2slope\" from SpatialRasterLite:\n [1] azimuth2slope(ψ)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/terrain/angle.jl:23",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Reference</span>"
     ]
@@ -324,7 +324,7 @@
     "href": "z-index.html#azimuth2xy",
     "title": "Reference",
     "section": "azimuth2xy",
-    "text": "azimuth2xy\n\n\n\n\n\n\nNo documentation found for public symbol.\nSpatialRasterLite.azimuth2xy is a Function.\n# 1 method for generic function \"azimuth2xy\" from SpatialRasterLite:\n [1] azimuth2xy(Φ::Real; verbose)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/terrain/angle.jl:25",
+    "text": "azimuth2xy\n\n\n\n\n\n\nNo documentation found for public binding SpatialRasterLite.azimuth2xy.\nSpatialRasterLite.azimuth2xy is a Function.\n# 1 method for generic function \"azimuth2xy\" from SpatialRasterLite:\n [1] azimuth2xy(Φ::Real; verbose)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/terrain/angle.jl:25",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Reference</span>"
     ]
@@ -334,7 +334,7 @@
     "href": "z-index.html#bandnames",
     "title": "Reference",
     "section": "bandnames",
-    "text": "bandnames\n\n\n\n\n\n\nNo documentation found for public symbol.\nSpatialRasterLite.bandnames is a Function.\n# 0 methods for generic function \"bandnames\" from SpatialRasterLite",
+    "text": "bandnames\n\n\n\n\n\n\nNo documentation found for public binding SpatialRasterLite.bandnames.\nSpatialRasterLite.bandnames is a Function.\n# 0 methods for generic function \"bandnames\" from SpatialRasterLite",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Reference</span>"
     ]
@@ -354,7 +354,7 @@
     "href": "z-index.html#bbox2cellsize",
     "title": "Reference",
     "section": "bbox2cellsize",
-    "text": "bbox2cellsize\n\n\n\n\n\n\nNo documentation found for public symbol.\nSpatialRasterLite.bbox2cellsize is a Function.\n# 1 method for generic function \"bbox2cellsize\" from SpatialRasterLite:\n [1] bbox2cellsize(b::bbox, size)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/bbox.jl:19",
+    "text": "bbox2cellsize\n\n\n\n\n\n\nNo documentation found for public binding SpatialRasterLite.bbox2cellsize.\nSpatialRasterLite.bbox2cellsize is a Function.\n# 1 method for generic function \"bbox2cellsize\" from SpatialRasterLite:\n [1] bbox2cellsize(b::bbox, size)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/bbox.jl:19",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Reference</span>"
     ]
@@ -374,7 +374,7 @@
     "href": "z-index.html#bbox2lims",
     "title": "Reference",
     "section": "bbox2lims",
-    "text": "bbox2lims\n\n\n\n\n\n\nNo documentation found for public symbol.\nSpatialRasterLite.bbox2lims is a Function.\n# 1 method for generic function \"bbox2lims\" from SpatialRasterLite:\n [1] bbox2lims(b::bbox)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/bbox.jl:65",
+    "text": "bbox2lims\n\n\n\n\n\n\nNo documentation found for public binding SpatialRasterLite.bbox2lims.\nSpatialRasterLite.bbox2lims is a Function.\n# 1 method for generic function \"bbox2lims\" from SpatialRasterLite:\n [1] bbox2lims(b::bbox)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/bbox.jl:65",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Reference</span>"
     ]
@@ -384,7 +384,7 @@
     "href": "z-index.html#bbox2ndim",
     "title": "Reference",
     "section": "bbox2ndim",
-    "text": "bbox2ndim\n\n\n\n\n\n\nNo documentation found for public symbol.\nSpatialRasterLite.bbox2ndim is a Function.\n# 1 method for generic function \"bbox2ndim\" from SpatialRasterLite:\n [1] bbox2ndim(b; size, cellsize)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/bbox.jl:48",
+    "text": "bbox2ndim\n\n\n\n\n\n\nNo documentation found for public binding SpatialRasterLite.bbox2ndim.\nSpatialRasterLite.bbox2ndim is a Function.\n# 1 method for generic function \"bbox2ndim\" from SpatialRasterLite:\n [1] bbox2ndim(b; size, cellsize)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/bbox.jl:48",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Reference</span>"
     ]
@@ -394,7 +394,7 @@
     "href": "z-index.html#bbox2range",
     "title": "Reference",
     "section": "bbox2range",
-    "text": "bbox2range\n\n\n\n\n\n\nNo documentation found for public symbol.\nSpatialRasterLite.bbox2range is a Function.\n# 1 method for generic function \"bbox2range\" from SpatialRasterLite:\n [1] bbox2range(b::bbox)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/bbox.jl:62",
+    "text": "bbox2range\n\n\n\n\n\n\nNo documentation found for public binding SpatialRasterLite.bbox2range.\nSpatialRasterLite.bbox2range is a Function.\n# 1 method for generic function \"bbox2range\" from SpatialRasterLite:\n [1] bbox2range(b::bbox)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/bbox.jl:62",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Reference</span>"
     ]
@@ -404,7 +404,7 @@
     "href": "z-index.html#bbox2vec",
     "title": "Reference",
     "section": "bbox2vec",
-    "text": "bbox2vec\n\n\n\n\n\n\nNo documentation found for public symbol.\nSpatialRasterLite.bbox2vec is a Function.\n# 1 method for generic function \"bbox2vec\" from SpatialRasterLite:\n [1] bbox2vec(b::bbox)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/bbox.jl:64",
+    "text": "bbox2vec\n\n\n\n\n\n\nNo documentation found for public binding SpatialRasterLite.bbox2vec.\nSpatialRasterLite.bbox2vec is a Function.\n# 1 method for generic function \"bbox2vec\" from SpatialRasterLite:\n [1] bbox2vec(b::bbox)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/bbox.jl:64",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Reference</span>"
     ]
@@ -414,7 +414,7 @@
     "href": "z-index.html#bbox_overlap",
     "title": "Reference",
     "section": "bbox_overlap",
-    "text": "bbox_overlap\n\n\n\n\n\n\nNo documentation found for public symbol.\nSpatialRasterLite.bbox_overlap is a Function.\n# 1 method for generic function \"bbox_overlap\" from SpatialRasterLite:\n [1] bbox_overlap(b::bbox, box::bbox; size, cellsize, reverse_lat, zip)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/bbox.jl:69",
+    "text": "bbox_overlap\n\n\n\n\n\n\nNo documentation found for public binding SpatialRasterLite.bbox_overlap.\nSpatialRasterLite.bbox_overlap is a Function.\n# 1 method for generic function \"bbox_overlap\" from SpatialRasterLite:\n [1] bbox_overlap(b::bbox, box::bbox; size, cellsize, reverse_lat, zip)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/bbox.jl:69",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Reference</span>"
     ]
@@ -424,7 +424,7 @@
     "href": "z-index.html#cellarea",
     "title": "Reference",
     "section": "cellArea",
-    "text": "cellArea\n\n\n\n\n\n\nNo documentation found for public symbol.\nSpatialRasterLite.cellArea is a Function.\n# 1 method for generic function \"cellArea\" from SpatialRasterLite:\n [1] cellArea(x, y, cellsize)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/SpatialRasterLite.jl:109",
+    "text": "cellArea\n\n\n\n\n\n\nNo documentation found for public binding SpatialRasterLite.cellArea.\nSpatialRasterLite.cellArea is a Function.\n# 1 method for generic function \"cellArea\" from SpatialRasterLite:\n [1] cellArea(x, y, cellsize)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/SpatialRasterLite.jl:109",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Reference</span>"
     ]
@@ -454,7 +454,7 @@
     "href": "z-index.html#deg2xy",
     "title": "Reference",
     "section": "deg2xy",
-    "text": "deg2xy\n\n\n\n\n\n\nNo documentation found for public symbol.\nSpatialRasterLite.deg2xy is a Function.\n# 1 method for generic function \"deg2xy\" from SpatialRasterLite:\n [1] deg2xy(θ::Real)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/terrain/angle.jl:36",
+    "text": "deg2xy\n\n\n\n\n\n\nNo documentation found for public binding SpatialRasterLite.deg2xy.\nSpatialRasterLite.deg2xy is a Function.\n# 1 method for generic function \"deg2xy\" from SpatialRasterLite:\n [1] deg2xy(θ::Real)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/terrain/angle.jl:36",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Reference</span>"
     ]
@@ -464,7 +464,7 @@
     "href": "z-index.html#dem_angle_maxelevation",
     "title": "Reference",
     "section": "dem_angle_MaxElevation",
-    "text": "dem_angle_MaxElevation\n\n\n\n\n\n\nNo documentation found for public symbol.\nSpatialRasterLite.dem_angle_MaxElevation is a Function.\n# 2 methods for generic function \"dem_angle_MaxElevation\" from SpatialRasterLite:\n [1] dem_angle_MaxElevation(elev::SpatRaster; δψ, radian)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/terrain/dem_slope.jl:37\n [2] dem_angle_MaxElevation(elev::SpatRaster, p0::Point{T}; δψ, radian, rastersize) where T\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/terrain/dem_slope.jl:18",
+    "text": "dem_angle_MaxElevation\n\n\n\n\n\n\nNo documentation found for public binding SpatialRasterLite.dem_angle_MaxElevation.\nSpatialRasterLite.dem_angle_MaxElevation is a Function.\n# 2 methods for generic function \"dem_angle_MaxElevation\" from SpatialRasterLite:\n [1] dem_angle_MaxElevation(elev::SpatRaster, p0::Point{T}; δψ, radian, rastersize) where T\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/terrain/dem_slope.jl:18\n [2] dem_angle_MaxElevation(elev::SpatRaster; δψ, radian)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/terrain/dem_slope.jl:37",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Reference</span>"
     ]
@@ -484,7 +484,7 @@
     "href": "z-index.html#direction",
     "title": "Reference",
     "section": "direction",
-    "text": "direction\n\n\n\n\n\n\nNo documentation found for public symbol.\nSpatialRasterLite.direction is a Function.\n# 1 method for generic function \"direction\" from SpatialRasterLite:\n [1] direction(x::T, y::T) where T\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/terrain/angle.jl:54",
+    "text": "direction\n\n\n\n\n\n\nNo documentation found for public binding SpatialRasterLite.direction.\nSpatialRasterLite.direction is a Function.\n# 1 method for generic function \"direction\" from SpatialRasterLite:\n [1] direction(x::T, y::T) where T\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/terrain/angle.jl:54",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Reference</span>"
     ]
@@ -494,7 +494,7 @@
     "href": "z-index.html#direction_e",
     "title": "Reference",
     "section": "direction_E",
-    "text": "direction_E\n\n\n\n\n\n\nNo documentation found for public symbol.\nSpatialRasterLite.direction_E is a Function.\n# 1 method for generic function \"direction_E\" from SpatialRasterLite:\n [1] direction_E(x::Real; eps)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/terrain/angle.jl:44",
+    "text": "direction_E\n\n\n\n\n\n\nNo documentation found for public binding SpatialRasterLite.direction_E.\nSpatialRasterLite.direction_E is a Function.\n# 1 method for generic function \"direction_E\" from SpatialRasterLite:\n [1] direction_E(x::Real; eps)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/terrain/angle.jl:44",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Reference</span>"
     ]
@@ -504,7 +504,7 @@
     "href": "z-index.html#direction_n",
     "title": "Reference",
     "section": "direction_N",
-    "text": "direction_N\n\n\n\n\n\n\nNo documentation found for public symbol.\nSpatialRasterLite.direction_N is a Function.\n# 1 method for generic function \"direction_N\" from SpatialRasterLite:\n [1] direction_N(y::Real; eps)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/terrain/angle.jl:49",
+    "text": "direction_N\n\n\n\n\n\n\nNo documentation found for public binding SpatialRasterLite.direction_N.\nSpatialRasterLite.direction_N is a Function.\n# 1 method for generic function \"direction_N\" from SpatialRasterLite:\n [1] direction_N(y::Real; eps)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/terrain/angle.jl:49",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Reference</span>"
     ]
@@ -524,7 +524,7 @@
     "href": "z-index.html#fliplr",
     "title": "Reference",
     "section": "fliplr",
-    "text": "fliplr\n\n\n\n\n\n\nNo documentation found for public symbol.\nSpatialRasterLite.fliplr is a Function.\n# 2 methods for generic function \"fliplr\" from SpatialRasterLite:\n [1] fliplr(x::AbstractArray{T, 3}) where T&lt;:Real\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/Ops.jl:14\n [2] fliplr(x::AbstractMatrix{T}) where T&lt;:Real\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/Ops.jl:13",
+    "text": "fliplr\n\n\n\n\n\n\nNo documentation found for public binding SpatialRasterLite.fliplr.\nSpatialRasterLite.fliplr is a Function.\n# 2 methods for generic function \"fliplr\" from SpatialRasterLite:\n [1] fliplr(x::AbstractMatrix{T}) where T&lt;:Real\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/Ops.jl:13\n [2] fliplr(x::AbstractArray{T, 3}) where T&lt;:Real\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/Ops.jl:14",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Reference</span>"
     ]
@@ -534,7 +534,7 @@
     "href": "z-index.html#flipud",
     "title": "Reference",
     "section": "flipud",
-    "text": "flipud\n\n\n\n\n\n\nNo documentation found for public symbol.\nSpatialRasterLite.flipud is a Function.\n# 2 methods for generic function \"flipud\" from SpatialRasterLite:\n [1] flipud(x::AbstractArray{T, 3}) where T&lt;:Real\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/Ops.jl:12\n [2] flipud(x::AbstractMatrix{T}) where T&lt;:Real\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/Ops.jl:11",
+    "text": "flipud\n\n\n\n\n\n\nNo documentation found for public binding SpatialRasterLite.flipud.\nSpatialRasterLite.flipud is a Function.\n# 2 methods for generic function \"flipud\" from SpatialRasterLite:\n [1] flipud(x::AbstractMatrix{T}) where T&lt;:Real\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/Ops.jl:11\n [2] flipud(x::AbstractArray{T, 3}) where T&lt;:Real\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/Ops.jl:12",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Reference</span>"
     ]
@@ -544,7 +544,7 @@
     "href": "z-index.html#gdal_info",
     "title": "Reference",
     "section": "gdal_info",
-    "text": "gdal_info\n\n\n\n\n\n\nNo documentation found for public symbol.\nSpatialRasterLite.gdal_info is a Function.\n# 0 methods for generic function \"gdal_info\" from SpatialRasterLite",
+    "text": "gdal_info\n\n\n\n\n\n\nNo documentation found for public binding SpatialRasterLite.gdal_info.\nSpatialRasterLite.gdal_info is a Function.\n# 0 methods for generic function \"gdal_info\" from SpatialRasterLite",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Reference</span>"
     ]
@@ -554,7 +554,7 @@
     "href": "z-index.html#gdal_nodata",
     "title": "Reference",
     "section": "gdal_nodata",
-    "text": "gdal_nodata\n\n\n\n\n\n\nNo documentation found for public symbol.\nSpatialRasterLite.gdal_nodata is a Function.\n# 0 methods for generic function \"gdal_nodata\" from SpatialRasterLite",
+    "text": "gdal_nodata\n\n\n\n\n\n\nNo documentation found for public binding SpatialRasterLite.gdal_nodata.\nSpatialRasterLite.gdal_nodata is a Function.\n# 0 methods for generic function \"gdal_nodata\" from SpatialRasterLite",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Reference</span>"
     ]
@@ -564,7 +564,7 @@
     "href": "z-index.html#gdal_polygonize",
     "title": "Reference",
     "section": "gdal_polygonize",
-    "text": "gdal_polygonize\n\n\n\n\n\n\nNo documentation found for public symbol.\nSpatialRasterLite.gdal_polygonize is a Function.\n# 0 methods for generic function \"gdal_polygonize\" from SpatialRasterLite",
+    "text": "gdal_polygonize\n\n\n\n\n\n\nNo documentation found for public binding SpatialRasterLite.gdal_polygonize.\nSpatialRasterLite.gdal_polygonize is a Function.\n# 0 methods for generic function \"gdal_polygonize\" from SpatialRasterLite",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Reference</span>"
     ]
@@ -574,7 +574,7 @@
     "href": "z-index.html#gdalinfo",
     "title": "Reference",
     "section": "gdalinfo",
-    "text": "gdalinfo\n\n\n\n\n\n\nNo documentation found for public symbol.\nSpatialRasterLite.gdalinfo is a Function.\n# 0 methods for generic function \"gdalinfo\" from SpatialRasterLite",
+    "text": "gdalinfo\n\n\n\n\n\n\nNo documentation found for public binding SpatialRasterLite.gdalinfo.\nSpatialRasterLite.gdalinfo is a Function.\n# 0 methods for generic function \"gdalinfo\" from SpatialRasterLite",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Reference</span>"
     ]
@@ -584,7 +584,7 @@
     "href": "z-index.html#getgeotransform",
     "title": "Reference",
     "section": "getgeotransform",
-    "text": "getgeotransform\n\n\n\n\n\n\nNo documentation found for public symbol.\nSpatialRasterLite.getgeotransform is a Function.\n# 1 method for generic function \"getgeotransform\" from SpatialRasterLite:\n [1] getgeotransform(ra::AbstractSpatRaster)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/Ops.jl:2",
+    "text": "getgeotransform\n\n\n\n\n\n\nNo documentation found for public binding SpatialRasterLite.getgeotransform.\nSpatialRasterLite.getgeotransform is a Function.\n# 1 method for generic function \"getgeotransform\" from SpatialRasterLite:\n [1] getgeotransform(ra::AbstractSpatRaster)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/Ops.jl:2",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Reference</span>"
     ]
@@ -594,7 +594,7 @@
     "href": "z-index.html#guanshan_dem",
     "title": "Reference",
     "section": "guanshan_dem",
-    "text": "guanshan_dem\n\n\n\n\n\n\nNo documentation found for public symbol.\nSpatialRasterLite.guanshan_dem is of type String.\n\nSummary\nmutable struct String\n\n\nSupertype Hierarchy\nString &lt;: AbstractString &lt;: Any",
+    "text": "guanshan_dem\n\n\n\n\n\n\nNo documentation found for public binding SpatialRasterLite.guanshan_dem.\nSpatialRasterLite.guanshan_dem is of type String.\n\nSummary\nmutable struct String\n\n\nSupertype Hierarchy\nString &lt;: AbstractString &lt;: Any",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Reference</span>"
     ]
@@ -604,7 +604,7 @@
     "href": "z-index.html#guanshan_flowdir_cpp",
     "title": "Reference",
     "section": "guanshan_flowdir_cpp",
-    "text": "guanshan_flowdir_cpp\n\n\n\n\n\n\nNo documentation found for public symbol.\nSpatialRasterLite.guanshan_flowdir_cpp is of type String.\n\nSummary\nmutable struct String\n\n\nSupertype Hierarchy\nString &lt;: AbstractString &lt;: Any",
+    "text": "guanshan_flowdir_cpp\n\n\n\n\n\n\nNo documentation found for public binding SpatialRasterLite.guanshan_flowdir_cpp.\nSpatialRasterLite.guanshan_flowdir_cpp is of type String.\n\nSummary\nmutable struct String\n\n\nSupertype Hierarchy\nString &lt;: AbstractString &lt;: Any",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Reference</span>"
     ]
@@ -614,7 +614,7 @@
     "href": "z-index.html#guanshan_flowdir_gis",
     "title": "Reference",
     "section": "guanshan_flowdir_gis",
-    "text": "guanshan_flowdir_gis\n\n\n\n\n\n\nNo documentation found for public symbol.\nSpatialRasterLite.guanshan_flowdir_gis is of type String.\n\nSummary\nmutable struct String\n\n\nSupertype Hierarchy\nString &lt;: AbstractString &lt;: Any",
+    "text": "guanshan_flowdir_gis\n\n\n\n\n\n\nNo documentation found for public binding SpatialRasterLite.guanshan_flowdir_gis.\nSpatialRasterLite.guanshan_flowdir_gis is of type String.\n\nSummary\nmutable struct String\n\n\nSupertype Hierarchy\nString &lt;: AbstractString &lt;: Any",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Reference</span>"
     ]
@@ -644,7 +644,7 @@
     "href": "z-index.html#isscalar",
     "title": "Reference",
     "section": "isscalar",
-    "text": "isscalar\n\n\n\n\n\n\nNo documentation found for public symbol.\nSpatialRasterLite.isscalar is a Function.\n# 2 methods for generic function \"isscalar\" from SpatialRasterLite:\n [1] isscalar(::Nothing)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/tools_Ipaper.jl:4\n [2] isscalar(x)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/tools_Ipaper.jl:3",
+    "text": "isscalar\n\n\n\n\n\n\nNo documentation found for public binding SpatialRasterLite.isscalar.\nSpatialRasterLite.isscalar is a Function.\n# 2 methods for generic function \"isscalar\" from SpatialRasterLite:\n [1] isscalar(::Nothing)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/tools_Ipaper.jl:4\n [2] isscalar(x)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/tools_Ipaper.jl:3",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Reference</span>"
     ]
@@ -654,7 +654,7 @@
     "href": "z-index.html#line_end",
     "title": "Reference",
     "section": "line_end",
-    "text": "line_end\n\n\n\n\n\n\nNo documentation found for public symbol.\nSpatialRasterLite.line_end is a Function.\n# 1 method for generic function \"line_end\" from SpatialRasterLite:\n [1] line_end(line::dLine)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/datatype.jl:69",
+    "text": "line_end\n\n\n\n\n\n\nNo documentation found for public binding SpatialRasterLite.line_end.\nSpatialRasterLite.line_end is a Function.\n# 1 method for generic function \"line_end\" from SpatialRasterLite:\n [1] line_end(line::dLine)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/datatype.jl:69",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Reference</span>"
     ]
@@ -664,7 +664,7 @@
     "href": "z-index.html#line_start",
     "title": "Reference",
     "section": "line_start",
-    "text": "line_start\n\n\n\n\n\n\nNo documentation found for public symbol.\nSpatialRasterLite.line_start is a Function.\n# 1 method for generic function \"line_start\" from SpatialRasterLite:\n [1] line_start(line::dLine)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/datatype.jl:67",
+    "text": "line_start\n\n\n\n\n\n\nNo documentation found for public binding SpatialRasterLite.line_start.\nSpatialRasterLite.line_start is a Function.\n# 1 method for generic function \"line_start\" from SpatialRasterLite:\n [1] line_start(line::dLine)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/datatype.jl:67",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Reference</span>"
     ]
@@ -674,7 +674,7 @@
     "href": "z-index.html#make_rast",
     "title": "Reference",
     "section": "make_rast",
-    "text": "make_rast\n\n\n\n\n\n\nNo documentation found for public symbol.\nSpatialRasterLite.make_rast is a Function.\n# 1 method for generic function \"make_rast\" from SpatialRasterLite:\n [1] make_rast(; b, cellsize, FT)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/SpatRaster.jl:72",
+    "text": "make_rast\n\n\n\n\n\n\nNo documentation found for public binding SpatialRasterLite.make_rast.\nSpatialRasterLite.make_rast is a Function.\n# 1 method for generic function \"make_rast\" from SpatialRasterLite:\n [1] make_rast(; b, cellsize, FT)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/SpatRaster.jl:72",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Reference</span>"
     ]
@@ -684,7 +684,7 @@
     "href": "z-index.html#median",
     "title": "Reference",
     "section": "median",
-    "text": "median\n\n\n\n\n\n\nmedian(itr)\nCompute the median of all elements in a collection. For an even number of elements no exact median element exists, so the result is equivalent to calculating mean of two median elements.\n\n\n\n\n\n\nNote\n\n\n\nIf itr contains NaN or missing values, the result is also NaN or missing (missing takes precedence if itr contains both). Use the skipmissing function to omit missing entries and compute the median of non-missing values.\n\n\n\nExamples\njulia&gt; using Statistics\n\njulia&gt; median([1, 2, 3])\n2.0\n\njulia&gt; median([1, 2, 3, 4])\n2.5\n\njulia&gt; median([1, 2, missing, 4])\nmissing\n\njulia&gt; median(skipmissing([1, 2, missing, 4]))\n2.0\nmedian(A::AbstractArray; dims)\nCompute the median of an array along the given dimensions.\n\n\nExamples\njulia&gt; using Statistics\n\njulia&gt; median([1 2; 3 4], dims=1)\n1×2 Matrix{Float64}:\n 2.0  3.0\nmedian(v::AbstractVector{&lt;:Real}, w::AbstractWeights)\nCompute the weighted median of v with weights w (of type AbstractWeights). See the documentation for quantile for more details.\nmedian(d::UnivariateDistribution)\nReturn the median value of distribution d. The median is the smallest x in the support of d for which cdf(d, x) ≥ 1/2. Corresponding to this definition as 1/2-quantile, a fallback is provided calling the quantile function.\nmedian(d::MvLogNormal)\nReturn the median vector of the lognormal distribution. which is strictly smaller than the mean.",
+    "text": "median\n\n\n\n\n\n\nmedian(itr)\nCompute the median of all elements in a collection. For an even number of elements no exact median element exists, so the result is equivalent to calculating mean of two median elements.\n\n\n\n\n\n\nNoteNote\n\n\n\nIf itr contains NaN or missing values, the result is also NaN or missing (missing takes precedence if itr contains both). Use the skipmissing function to omit missing entries and compute the median of non-missing values.\n\n\n\nExamples\njulia&gt; using Statistics\n\njulia&gt; median([1, 2, 3])\n2.0\n\njulia&gt; median([1, 2, 3, 4])\n2.5\n\njulia&gt; median([1, 2, missing, 4])\nmissing\n\njulia&gt; median(skipmissing([1, 2, missing, 4]))\n2.0\nmedian(A::AbstractArray; dims)\nCompute the median of an array along the given dimensions.\n\n\nExamples\njulia&gt; using Statistics\n\njulia&gt; median([1 2; 3 4], dims=1)\n1×2 Matrix{Float64}:\n 2.0  3.0\nmedian(v::AbstractVector{&lt;:Real}, w::AbstractWeights)\nCompute the weighted median of v with weights w (of type AbstractWeights). See the documentation for quantile for more details.\nmedian(d::UnivariateDistribution)\nReturn the median value of distribution d. The median is the smallest x in the support of d for which cdf(d, x) ≥ 1/2. Corresponding to this definition as 1/2-quantile, a fallback is provided calling the quantile function.\nmedian(d::MvLogNormal)\nReturn the median vector of the lognormal distribution. which is strictly smaller than the mean.",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Reference</span>"
     ]
@@ -704,7 +704,7 @@
     "href": "z-index.html#merge_var-1",
     "title": "Reference",
     "section": "merge_var!",
-    "text": "merge_var!\n\n\n\n\n\n\nNo documentation found for public symbol.\nSpatialRasterLite.merge_var! is a Function.\n# 1 method for generic function \"merge_var!\" from SpatialRasterLite:\n [1] merge_var!(R::AbstractArray, f; var, box, cellsize)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/st_mosaic.jl:35",
+    "text": "merge_var!\n\n\n\n\n\n\nNo documentation found for public binding SpatialRasterLite.merge_var!.\nSpatialRasterLite.merge_var! is a Function.\n# 1 method for generic function \"merge_var!\" from SpatialRasterLite:\n [1] merge_var!(R::AbstractArray, f; var, box, cellsize)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/st_mosaic.jl:35",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Reference</span>"
     ]
@@ -714,7 +714,7 @@
     "href": "z-index.html#meshgrid",
     "title": "Reference",
     "section": "meshgrid",
-    "text": "meshgrid\n\n\n\n\n\n\nNo documentation found for public symbol.\nSpatialRasterLite.meshgrid is a Function.\n# 1 method for generic function \"meshgrid\" from SpatialRasterLite:\n [1] meshgrid(x, y)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/tools_Ipaper.jl:7",
+    "text": "meshgrid\n\n\n\n\n\n\nNo documentation found for public binding SpatialRasterLite.meshgrid.\nSpatialRasterLite.meshgrid is a Function.\n# 1 method for generic function \"meshgrid\" from SpatialRasterLite:\n [1] meshgrid(x, y)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/tools_Ipaper.jl:7",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Reference</span>"
     ]
@@ -724,7 +724,7 @@
     "href": "z-index.html#nband",
     "title": "Reference",
     "section": "nband",
-    "text": "nband\n\n\n\n\n\n\nNo documentation found for public symbol.\nSpatialRasterLite.nband is a Function.\n# 1 method for generic function \"nband\" from SpatialRasterLite:\n [1] nband(ra::SpatRaster{T, N}) where {T, N}\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/SpatRaster.jl:21",
+    "text": "nband\n\n\n\n\n\n\nNo documentation found for public binding SpatialRasterLite.nband.\nSpatialRasterLite.nband is a Function.\n# 1 method for generic function \"nband\" from SpatialRasterLite:\n [1] nband(ra::SpatRaster{T, N}) where {T, N}\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/SpatRaster.jl:21",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Reference</span>"
     ]
@@ -734,7 +734,7 @@
     "href": "z-index.html#nlayer",
     "title": "Reference",
     "section": "nlayer",
-    "text": "nlayer\n\n\n\n\n\n\nNo documentation found for public symbol.\nSpatialRasterLite.nlayer is a Function.\n# 0 methods for generic function \"nlayer\" from SpatialRasterLite",
+    "text": "nlayer\n\n\n\n\n\n\nNo documentation found for public binding SpatialRasterLite.nlayer.\nSpatialRasterLite.nlayer is a Function.\n# 0 methods for generic function \"nlayer\" from SpatialRasterLite",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Reference</span>"
     ]
@@ -744,7 +744,7 @@
     "href": "z-index.html#nlyr",
     "title": "Reference",
     "section": "nlyr",
-    "text": "nlyr\n\n\n\n\n\n\nNo documentation found for public symbol.\nSpatialRasterLite.nband is a Function.\n# 1 method for generic function \"nband\" from SpatialRasterLite:\n [1] nband(ra::SpatRaster{T, N}) where {T, N}\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/SpatRaster.jl:21",
+    "text": "nlyr\n\n\n\n\n\n\nNo documentation found for public binding SpatialRasterLite.nband.\nSpatialRasterLite.nband is a Function.\n# 1 method for generic function \"nband\" from SpatialRasterLite:\n [1] nband(ra::SpatRaster{T, N}) where {T, N}\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/SpatRaster.jl:21",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Reference</span>"
     ]
@@ -754,7 +754,7 @@
     "href": "z-index.html#ogr_info",
     "title": "Reference",
     "section": "ogr_info",
-    "text": "ogr_info\n\n\n\n\n\n\nNo documentation found for public symbol.\nSpatialRasterLite.ogr_info is a Function.\n# 0 methods for generic function \"ogr_info\" from SpatialRasterLite",
+    "text": "ogr_info\n\n\n\n\n\n\nNo documentation found for public binding SpatialRasterLite.ogr_info.\nSpatialRasterLite.ogr_info is a Function.\n# 0 methods for generic function \"ogr_info\" from SpatialRasterLite",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Reference</span>"
     ]
@@ -764,7 +764,7 @@
     "href": "z-index.html#range2bbox",
     "title": "Reference",
     "section": "range2bbox",
-    "text": "range2bbox\n\n\n\n\n\n\nNo documentation found for public symbol.\nSpatialRasterLite.range2bbox is a Function.\n# 1 method for generic function \"range2bbox\" from SpatialRasterLite:\n [1] range2bbox(r::AbstractVector)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/bbox.jl:67",
+    "text": "range2bbox\n\n\n\n\n\n\nNo documentation found for public binding SpatialRasterLite.range2bbox.\nSpatialRasterLite.range2bbox is a Function.\n# 1 method for generic function \"range2bbox\" from SpatialRasterLite:\n [1] range2bbox(r::AbstractVector)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/bbox.jl:67",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Reference</span>"
     ]
@@ -774,7 +774,7 @@
     "href": "z-index.html#rast",
     "title": "Reference",
     "section": "rast",
-    "text": "rast\n\n\n\n\n\n\nNo documentation found for public symbol.\n\nSummary\nmutable struct SpatRaster{T, N}\n\n\nFields\nA        :: AbstractArray{T, N}\nb        :: bbox\ncellsize :: Tuple{Real, Real}\nlon      :: AbstractVector{&lt;:Real}\nlat      :: AbstractVector{&lt;:Real}\ntime     :: Union{Nothing, AbstractVector}\nbands    :: Union{Nothing, AbstractVector{String}}\nname     :: String\nnodata   :: Union{Nothing, AbstractArray{T, 1}}\n\n\nSupertype Hierarchy\nSpatRaster{T, N} &lt;: AbstractSpatRaster{T, N} &lt;: Any",
+    "text": "rast\n\n\n\n\n\n\nNo documentation found for public binding SpatialRasterLite.rast.\n\nSummary\nmutable struct SpatRaster{T, N}\n\n\nFields\nA        :: AbstractArray{T, N}\nb        :: bbox\ncellsize :: Tuple{Real, Real}\nlon      :: AbstractVector{&lt;:Real}\nlat      :: AbstractVector{&lt;:Real}\ntime     :: Union{Nothing, AbstractVector}\nbands    :: Union{Nothing, AbstractVector{String}}\nname     :: String\nnodata   :: Union{Nothing, AbstractArray{T, 1}}\n\n\nSupertype Hierarchy\nSpatRaster{T, N} &lt;: AbstractSpatRaster{T, N} &lt;: Any",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Reference</span>"
     ]
@@ -784,7 +784,7 @@
     "href": "z-index.html#read_gdal",
     "title": "Reference",
     "section": "read_gdal",
-    "text": "read_gdal\n\n\n\n\n\n\nNo documentation found for public symbol.\nSpatialRasterLite.read_gdal is a Function.\n# 3 methods for generic function \"read_gdal\" from SpatialRasterLite:\n [1] read_gdal(file::AbstractString, b::bbox, options...)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/IO.jl:35\n [2] read_gdal(file::AbstractString, indices, b::bbox, options...)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/IO.jl:22\n [3] read_gdal(files::Vector{&lt;:AbstractString}, options...)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/IO.jl:13",
+    "text": "read_gdal\n\n\n\n\n\n\nNo documentation found for public binding SpatialRasterLite.read_gdal.\nSpatialRasterLite.read_gdal is a Function.\n# 3 methods for generic function \"read_gdal\" from SpatialRasterLite:\n [1] read_gdal(files::Vector{&lt;:AbstractString}, options...)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/IO.jl:13\n [2] read_gdal(file::AbstractString, indices, b::bbox, options...)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/IO.jl:22\n [3] read_gdal(file::AbstractString, b::bbox, options...)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/IO.jl:35",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Reference</span>"
     ]
@@ -794,7 +794,7 @@
     "href": "z-index.html#read_sf",
     "title": "Reference",
     "section": "read_sf",
-    "text": "read_sf\n\n\n\n\n\n\nNo documentation found for public symbol.\nSpatialRasterLite.read_sf is a Function.\n# 0 methods for generic function \"read_sf\" from SpatialRasterLite",
+    "text": "read_sf\n\n\n\n\n\n\nNo documentation found for public binding SpatialRasterLite.read_sf.\nSpatialRasterLite.read_sf is a Function.\n# 0 methods for generic function \"read_sf\" from SpatialRasterLite",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Reference</span>"
     ]
@@ -804,7 +804,7 @@
     "href": "z-index.html#resample_first",
     "title": "Reference",
     "section": "resample_first",
-    "text": "resample_first\n\n\n\n\n\n\nNo documentation found for public symbol.\nSpatialRasterLite.resample_first is a Function.\n# 1 method for generic function \"resample_first\" from SpatialRasterLite:\n [1] resample_first(r::AbstractArray; fact, deepcopy)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/st_resample.jl:6",
+    "text": "resample_first\n\n\n\n\n\n\nNo documentation found for public binding SpatialRasterLite.resample_first.\nSpatialRasterLite.resample_first is a Function.\n# 1 method for generic function \"resample_first\" from SpatialRasterLite:\n [1] resample_first(r::AbstractArray; fact, deepcopy)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/st_resample.jl:6",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Reference</span>"
     ]
@@ -814,7 +814,7 @@
     "href": "z-index.html#rm_shp",
     "title": "Reference",
     "section": "rm_shp",
-    "text": "rm_shp\n\n\n\n\n\n\nNo documentation found for public symbol.\nSpatialRasterLite.rm_shp is a Function.\n# 1 method for generic function \"rm_shp\" from SpatialRasterLite:\n [1] rm_shp(f)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/SpatialRasterLite.jl:103",
+    "text": "rm_shp\n\n\n\n\n\n\nNo documentation found for public binding SpatialRasterLite.rm_shp.\nSpatialRasterLite.rm_shp is a Function.\n# 1 method for generic function \"rm_shp\" from SpatialRasterLite:\n [1] rm_shp(f)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/SpatialRasterLite.jl:103",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Reference</span>"
     ]
@@ -824,7 +824,7 @@
     "href": "z-index.html#set_bandnames",
     "title": "Reference",
     "section": "set_bandnames",
-    "text": "set_bandnames\n\n\n\n\n\n\nNo documentation found for public symbol.\nSpatialRasterLite.set_bandnames is a Function.\n# 0 methods for generic function \"set_bandnames\" from SpatialRasterLite",
+    "text": "set_bandnames\n\n\n\n\n\n\nNo documentation found for public binding SpatialRasterLite.set_bandnames.\nSpatialRasterLite.set_bandnames is a Function.\n# 0 methods for generic function \"set_bandnames\" from SpatialRasterLite",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Reference</span>"
     ]
@@ -834,7 +834,7 @@
     "href": "z-index.html#st_bbox",
     "title": "Reference",
     "section": "st_bbox",
-    "text": "st_bbox\n\n\n\n\n\n\nNo documentation found for public symbol.\nSpatialRasterLite.st_bbox is a Function.\n# 6 methods for generic function \"st_bbox\" from SpatialRasterLite:\n [1] st_bbox(bs::Vector{bbox})\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/st_bbox.jl:22\n [2] st_bbox(f::String)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/st_bbox.jl:15\n [3] st_bbox(lon, lat)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/st_bbox.jl:8\n [4] st_bbox(v::Vector{&lt;:Real})\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/st_bbox.jl:4\n [5] st_bbox(r::AbstractSpatRaster)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/st_bbox.jl:2\n [6] st_bbox(line::dLine)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/datatype.jl:77",
+    "text": "st_bbox\n\n\n\n\n\n\nNo documentation found for public binding SpatialRasterLite.st_bbox.\nSpatialRasterLite.st_bbox is a Function.\n# 6 methods for generic function \"st_bbox\" from SpatialRasterLite:\n [1] st_bbox(f::String)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/st_bbox.jl:15\n [2] st_bbox(bs::Vector{bbox})\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/st_bbox.jl:22\n [3] st_bbox(lon, lat)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/st_bbox.jl:8\n [4] st_bbox(line::dLine)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/datatype.jl:77\n [5] st_bbox(r::AbstractSpatRaster)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/st_bbox.jl:2\n [6] st_bbox(v::Vector{&lt;:Real})\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/st_bbox.jl:4",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Reference</span>"
     ]
@@ -844,7 +844,7 @@
     "href": "z-index.html#st_cellsize",
     "title": "Reference",
     "section": "st_cellsize",
-    "text": "st_cellsize\n\n\n\n\n\n\nNo documentation found for public symbol.\nSpatialRasterLite.st_cellsize is a Function.\n# 3 methods for generic function \"st_cellsize\" from SpatialRasterLite:\n [1] st_cellsize(f::AbstractString)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/st_dims.jl:51\n [2] st_cellsize(lon::AbstractVector, lat::AbstractVector)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/st_dims.jl:47\n [3] st_cellsize(r::AbstractSpatRaster)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/st_dims.jl:45",
+    "text": "st_cellsize\n\n\n\n\n\n\nNo documentation found for public binding SpatialRasterLite.st_cellsize.\nSpatialRasterLite.st_cellsize is a Function.\n# 3 methods for generic function \"st_cellsize\" from SpatialRasterLite:\n [1] st_cellsize(r::AbstractSpatRaster)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/st_dims.jl:45\n [2] st_cellsize(lon::AbstractVector, lat::AbstractVector)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/st_dims.jl:47\n [3] st_cellsize(f::AbstractString)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/st_dims.jl:51",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Reference</span>"
     ]
@@ -854,7 +854,7 @@
     "href": "z-index.html#st_coords",
     "title": "Reference",
     "section": "st_coords",
-    "text": "st_coords\n\n\n\n\n\n\nNo documentation found for public symbol.\nSpatialRasterLite.st_coords is a Function.\n# 1 method for generic function \"st_coords\" from SpatialRasterLite:\n [1] st_coords(ra::SpatRaster)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/SpatialRasterLite.jl:83",
+    "text": "st_coords\n\n\n\n\n\n\nNo documentation found for public binding SpatialRasterLite.st_coords.\nSpatialRasterLite.st_coords is a Function.\n# 1 method for generic function \"st_coords\" from SpatialRasterLite:\n [1] st_coords(ra::SpatRaster)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/SpatialRasterLite.jl:83",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Reference</span>"
     ]
@@ -864,7 +864,7 @@
     "href": "z-index.html#st_crop",
     "title": "Reference",
     "section": "st_crop",
-    "text": "st_crop\n\n\n\n\n\n\nNo documentation found for public symbol.\nSpatialRasterLite.st_crop is a Function.\n# 2 methods for generic function \"st_crop\" from SpatialRasterLite:\n [1] st_crop(f::String, b::bbox)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/st_crop.jl:3\n [2] st_crop(ra::SpatRaster, b::bbox)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/st_crop.jl:5",
+    "text": "st_crop\n\n\n\n\n\n\nNo documentation found for public binding SpatialRasterLite.st_crop.\nSpatialRasterLite.st_crop is a Function.\n# 2 methods for generic function \"st_crop\" from SpatialRasterLite:\n [1] st_crop(f::String, b::bbox)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/st_crop.jl:3\n [2] st_crop(ra::SpatRaster, b::bbox)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/st_crop.jl:5",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Reference</span>"
     ]
@@ -874,7 +874,7 @@
     "href": "z-index.html#st_dims",
     "title": "Reference",
     "section": "st_dims",
-    "text": "st_dims\n\n\n\n\n\n\nNo documentation found for public symbol.\nSpatialRasterLite.st_dims is a Function.\n# 4 methods for generic function \"st_dims\" from SpatialRasterLite:\n [1] st_dims(x::SpatialRasterLite.FileGDAL)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/st_dims.jl:32\n [2] st_dims(f::String)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/st_dims.jl:26\n [3] st_dims(rastersize::RasterSize)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/SpatRaster.jl:202\n [4] st_dims(r::AbstractSpatRaster)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/st_dims.jl:24",
+    "text": "st_dims\n\n\n\n\n\n\nNo documentation found for public binding SpatialRasterLite.st_dims.\nSpatialRasterLite.st_dims is a Function.\n# 4 methods for generic function \"st_dims\" from SpatialRasterLite:\n [1] st_dims(rastersize::RasterSize)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/SpatRaster.jl:202\n [2] st_dims(f::String)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/st_dims.jl:26\n [3] st_dims(x::SpatialRasterLite.FileGDAL)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/st_dims.jl:32\n [4] st_dims(r::AbstractSpatRaster)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/st_dims.jl:24",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Reference</span>"
     ]
@@ -884,7 +884,7 @@
     "href": "z-index.html#st_extract",
     "title": "Reference",
     "section": "st_extract",
-    "text": "st_extract\n\n\n\n\n\n\nNo documentation found for public symbol.\nSpatialRasterLite.st_extract is a Function.\n# 2 methods for generic function \"st_extract\" from SpatialRasterLite:\n [1] st_extract(ra::AbstractSpatRaster, points::Vector{P}; combine) where {T&lt;:Real, P&lt;:Union{Tuple{T, T}, Point{T}}}\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/st_extract.jl:28\n [2] st_extract(ra::AbstractSpatRaster{FT}, point::P) where {FT, T, P&lt;:Union{Tuple{T, T}, Point{T}}}\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/st_extract.jl:19",
+    "text": "st_extract\n\n\n\n\n\n\nNo documentation found for public binding SpatialRasterLite.st_extract.\nSpatialRasterLite.st_extract is a Function.\n# 2 methods for generic function \"st_extract\" from SpatialRasterLite:\n [1] st_extract(ra::AbstractSpatRaster{FT}, point::P) where {FT, T, P&lt;:Union{Tuple{T, T}, Point{T}}}\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/st_extract.jl:19\n [2] st_extract(ra::AbstractSpatRaster, points::Vector{P}; combine) where {T&lt;:Real, P&lt;:Union{Tuple{T, T}, Point{T}}}\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/st_extract.jl:28",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Reference</span>"
     ]
@@ -894,7 +894,7 @@
     "href": "z-index.html#st_location-1",
     "title": "Reference",
     "section": "st_location",
-    "text": "st_location\n\n\n\n\n\n\nNo documentation found for public symbol.\nSpatialRasterLite.st_location is a Function.\n# 2 methods for generic function \"st_location\" from SpatialRasterLite:\n [1] st_location(ra::AbstractSpatRaster, args...; kw...)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/st_location.jl:41\n [2] st_location(rastersize::RasterSize, points::Vector{P}; rm_empty) where {T&lt;:Real, P&lt;:Union{Tuple{T, T}, Point{T}}}\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/st_location.jl:33",
+    "text": "st_location\n\n\n\n\n\n\nNo documentation found for public binding SpatialRasterLite.st_location.\nSpatialRasterLite.st_location is a Function.\n# 2 methods for generic function \"st_location\" from SpatialRasterLite:\n [1] st_location(rastersize::RasterSize, points::Vector{P}; rm_empty) where {T&lt;:Real, P&lt;:Union{Tuple{T, T}, Point{T}}}\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/st_location.jl:33\n [2] st_location(ra::AbstractSpatRaster, args...; kw...)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/st_location.jl:41",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Reference</span>"
     ]
@@ -904,7 +904,7 @@
     "href": "z-index.html#st_location_exact",
     "title": "Reference",
     "section": "st_location_exact",
-    "text": "st_location_exact\n\n\n\n\n\n\nNo documentation found for public symbol.\nSpatialRasterLite.st_location_exact is a Function.\n# 1 method for generic function \"st_location_exact\" from SpatialRasterLite:\n [1] st_location_exact(lon::AbstractVector, lat::AbstractVector, points::Array{Tuple{T, T}, 1}; rm_empty, cellsize, tol) where T&lt;:Real\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/st_location.jl:48",
+    "text": "st_location_exact\n\n\n\n\n\n\nNo documentation found for public binding SpatialRasterLite.st_location_exact.\nSpatialRasterLite.st_location_exact is a Function.\n# 1 method for generic function \"st_location_exact\" from SpatialRasterLite:\n [1] st_location_exact(lon::AbstractVector, lat::AbstractVector, points::Array{Tuple{T, T}, 1}; rm_empty, cellsize, tol) where T&lt;:Real\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/st_location.jl:48",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Reference</span>"
     ]
@@ -924,7 +924,7 @@
     "href": "z-index.html#st_points",
     "title": "Reference",
     "section": "st_points",
-    "text": "st_points\n\n\n\n\n\n\nNo documentation found for public symbol.\nSpatialRasterLite.st_points is a Function.\n# 2 methods for generic function \"st_points\" from SpatialRasterLite:\n [1] st_points(X::AbstractMatrix{T}) where T\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/SpatialRasterLite.jl:93\n [2] st_points(x::AbstractVector, y::AbstractVector)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/SpatialRasterLite.jl:89",
+    "text": "st_points\n\n\n\n\n\n\nNo documentation found for public binding SpatialRasterLite.st_points.\nSpatialRasterLite.st_points is a Function.\n# 2 methods for generic function \"st_points\" from SpatialRasterLite:\n [1] st_points(x::AbstractVector, y::AbstractVector)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/SpatialRasterLite.jl:89\n [2] st_points(X::AbstractMatrix{T}) where T\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/SpatialRasterLite.jl:93",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Reference</span>"
     ]
@@ -934,7 +934,7 @@
     "href": "z-index.html#st_read",
     "title": "Reference",
     "section": "st_read",
-    "text": "st_read\n\n\n\n\n\n\nNo documentation found for public symbol.\nSpatialRasterLite.read_gdal is a Function.\n# 3 methods for generic function \"read_gdal\" from SpatialRasterLite:\n [1] read_gdal(file::AbstractString, b::bbox, options...)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/IO.jl:35\n [2] read_gdal(file::AbstractString, indices, b::bbox, options...)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/IO.jl:22\n [3] read_gdal(files::Vector{&lt;:AbstractString}, options...)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/IO.jl:13",
+    "text": "st_read\n\n\n\n\n\n\nNo documentation found for public binding SpatialRasterLite.read_gdal.\nSpatialRasterLite.read_gdal is a Function.\n# 3 methods for generic function \"read_gdal\" from SpatialRasterLite:\n [1] read_gdal(files::Vector{&lt;:AbstractString}, options...)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/IO.jl:13\n [2] read_gdal(file::AbstractString, indices, b::bbox, options...)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/IO.jl:22\n [3] read_gdal(file::AbstractString, b::bbox, options...)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/IO.jl:35",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Reference</span>"
     ]
@@ -944,7 +944,7 @@
     "href": "z-index.html#st_write",
     "title": "Reference",
     "section": "st_write",
-    "text": "st_write\n\n\n\n\n\n\nNo documentation found for public symbol.\nSpatialRasterLite.write_gdal is a Function.\n# 0 methods for generic function \"write_gdal\" from SpatialRasterLite",
+    "text": "st_write\n\n\n\n\n\n\nNo documentation found for public binding SpatialRasterLite.write_gdal.\nSpatialRasterLite.write_gdal is a Function.\n# 0 methods for generic function \"write_gdal\" from SpatialRasterLite",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Reference</span>"
     ]
@@ -954,7 +954,7 @@
     "href": "z-index.html#sun_shade",
     "title": "Reference",
     "section": "sun_shade",
-    "text": "sun_shade\n\n\n\n\n\n\nNo documentation found for public symbol.\nSpatialRasterLite.sun_shade is a Function.\n# 1 method for generic function \"sun_shade\" from SpatialRasterLite:\n [1] sun_shade(α::SpatRaster, time::Dates.DateTime; δψ)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/terrain/sun_shade.jl:3",
+    "text": "sun_shade\n\n\n\n\n\n\nNo documentation found for public binding SpatialRasterLite.sun_shade.\nSpatialRasterLite.sun_shade is a Function.\n# 1 method for generic function \"sun_shade\" from SpatialRasterLite:\n [1] sun_shade(α::SpatRaster, time::Dates.DateTime; δψ)\n     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/terrain/sun_shade.jl:3",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Reference</span>"
     ]
@@ -974,7 +974,7 @@
     "href": "z-index.html#write_gdal",
     "title": "Reference",
     "section": "write_gdal",
-    "text": "write_gdal\n\n\n\n\n\n\nNo documentation found for public symbol.\nSpatialRasterLite.write_gdal is a Function.\n# 0 methods for generic function \"write_gdal\" from SpatialRasterLite",
+    "text": "write_gdal\n\n\n\n\n\n\nNo documentation found for public binding SpatialRasterLite.write_gdal.\nSpatialRasterLite.write_gdal is a Function.\n# 0 methods for generic function \"write_gdal\" from SpatialRasterLite",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Reference</span>"
     ]
@@ -984,7 +984,7 @@
     "href": "z-index.html#write_sf",
     "title": "Reference",
     "section": "write_sf",
-    "text": "write_sf\n\n\n\n\n\n\nNo documentation found for public symbol.\nSpatialRasterLite.write_sf is a Function.\n# 0 methods for generic function \"write_sf\" from SpatialRasterLite",
+    "text": "write_sf\n\n\n\n\n\n\nNo documentation found for public binding SpatialRasterLite.write_sf.\nSpatialRasterLite.write_sf is a Function.\n# 0 methods for generic function \"write_sf\" from SpatialRasterLite",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Reference</span>"
     ]
