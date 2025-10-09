@@ -1,4 +1,4 @@
-export SpatArchGDALExt
+# export SpatArchGDALExt
 module SpatArchGDALExt
 
 using DocStringExtensions: TYPEDSIGNATURES, METHODLIST
