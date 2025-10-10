@@ -1,7 +1,7 @@
 name = "SpatialRasterLite"
 uuid = "25a4c9b9-c310-4d6e-b9a7-fa79274760a1"
 authors = ["Dongdong Kong <kongdd@users.noreply.github.com>"]
-version = "0.1.0"
+version = "0.1.1"
 
 [deps]
 Dates = "ade2ca70-3891-5945-98fb-dc099432e06a"
@@ -25,7 +25,7 @@ Parameters = "0.12.3"
 ProgressMeter = "1.10.4"
 Random = "1.11.0"
 Statistics = "1.11.1"
-julia = "1.11"
+julia = "1.11, 1.12"
 
 [extras]
 ArchGDAL = "c9ce4bd3-c3d5-55b8-8973-c0e20141b8c3"
