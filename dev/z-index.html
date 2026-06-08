@@ -2,13 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.25">
+<meta name="generator" content="quarto-1.9.38">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>Reference – SpatialRasterLite</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -20,45 +23,10 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script><script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -68,19 +36,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="./6-Visualization.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-707d8167ce6003fca903bfe2be84ab7f.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-9eef12e7c79e0a3043f45b553949e2bc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-d999e039b096b1848522e97d2d6cf19b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-9eef12e7c79e0a3043f45b553949e2bc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-3c783a26b990b0a0438cc0f6bb36fd68.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-e88e7fda9ecf262689f8c1ca6482b415.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-3c783a26b990b0a0438cc0f6bb36fd68.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -107,6 +74,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.6/require.min.js" integrity="sha384-c9c+LnTbwQ3aujuU7ULEPVvgLs+Fn6fJUvIGTsuu1ZcCf11fiEubah0ttpca4ntM sha384-6V1/AdqZRWk1KAlWbKBlGhN7VG4iE/yAZcO6NZPMF8od0vukrvr0tg4qY6NSrItx" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 <script>
 // 
 // The code below was originally written by the authors of Wflow.jl. Their 
@@ -383,8 +353,6 @@ window.onload = function () {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    </a>
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">SpatialRasterLite</span>
     </a>
@@ -428,10 +396,6 @@ window.onload = function () {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
-      <a href="./index.html" class="sidebar-logo-link">
-      </a>
-      </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
         <div id="quarto-search" class="" title="Search"></div>
@@ -479,95 +443,8 @@ window.onload = function () {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of Contents</h2>
-   
-  <ul>
-  <li><a href="#abstractspatraster" id="toc-abstractspatraster" class="nav-link active" data-scroll-target="#abstractspatraster"><code>AbstractSpatRaster</code></a></li>
-  <li><a href="#point" id="toc-point" class="nav-link" data-scroll-target="#point"><code>Point</code></a></li>
-  <li><a href="#point3" id="toc-point3" class="nav-link" data-scroll-target="#point3"><code>Point3</code></a></li>
-  <li><a href="#rastersize" id="toc-rastersize" class="nav-link" data-scroll-target="#rastersize"><code>RasterSize</code></a></li>
-  <li><a href="#svf" id="toc-svf" class="nav-link" data-scroll-target="#svf"><code>SVF</code></a></li>
-  <li><a href="#svf_azimuth" id="toc-svf_azimuth" class="nav-link" data-scroll-target="#svf_azimuth"><code>SVF_azimuth</code></a></li>
-  <li><a href="#svf_azimuth_simple" id="toc-svf_azimuth_simple" class="nav-link" data-scroll-target="#svf_azimuth_simple"><code>SVF_azimuth_simple</code></a></li>
-  <li><a href="#spatraster" id="toc-spatraster" class="nav-link" data-scroll-target="#spatraster"><code>SpatRaster</code></a></li>
-  <li><a href="#spatialrasterlite" id="toc-spatialrasterlite" class="nav-link" data-scroll-target="#spatialrasterlite"><code>SpatialRasterLite</code></a></li>
-  <li><a href="#st_location" id="toc-st_location" class="nav-link" data-scroll-target="#st_location"><code>_st_location</code></a></li>
-  <li><a href="#angle_solardeclination" id="toc-angle_solardeclination" class="nav-link" data-scroll-target="#angle_solardeclination"><code>angle_SolarDeclination</code></a></li>
-  <li><a href="#angle_sunazimuth" id="toc-angle_sunazimuth" class="nav-link" data-scroll-target="#angle_sunazimuth"><code>angle_SunAzimuth</code></a></li>
-  <li><a href="#angle_sunelevation" id="toc-angle_sunelevation" class="nav-link" data-scroll-target="#angle_sunelevation"><code>angle_SunElevation</code></a></li>
-  <li><a href="#azimuth2deg" id="toc-azimuth2deg" class="nav-link" data-scroll-target="#azimuth2deg"><code>azimuth2deg</code></a></li>
-  <li><a href="#azimuth2slope" id="toc-azimuth2slope" class="nav-link" data-scroll-target="#azimuth2slope"><code>azimuth2slope</code></a></li>
-  <li><a href="#azimuth2xy" id="toc-azimuth2xy" class="nav-link" data-scroll-target="#azimuth2xy"><code>azimuth2xy</code></a></li>
-  <li><a href="#bandnames" id="toc-bandnames" class="nav-link" data-scroll-target="#bandnames"><code>bandnames</code></a></li>
-  <li><a href="#bbox" id="toc-bbox" class="nav-link" data-scroll-target="#bbox"><code>bbox</code></a></li>
-  <li><a href="#bbox2cellsize" id="toc-bbox2cellsize" class="nav-link" data-scroll-target="#bbox2cellsize"><code>bbox2cellsize</code></a></li>
-  <li><a href="#bbox2dims" id="toc-bbox2dims" class="nav-link" data-scroll-target="#bbox2dims"><code>bbox2dims</code></a></li>
-  <li><a href="#bbox2lims" id="toc-bbox2lims" class="nav-link" data-scroll-target="#bbox2lims"><code>bbox2lims</code></a></li>
-  <li><a href="#bbox2ndim" id="toc-bbox2ndim" class="nav-link" data-scroll-target="#bbox2ndim"><code>bbox2ndim</code></a></li>
-  <li><a href="#bbox2range" id="toc-bbox2range" class="nav-link" data-scroll-target="#bbox2range"><code>bbox2range</code></a></li>
-  <li><a href="#bbox2vec" id="toc-bbox2vec" class="nav-link" data-scroll-target="#bbox2vec"><code>bbox2vec</code></a></li>
-  <li><a href="#bbox_overlap" id="toc-bbox_overlap" class="nav-link" data-scroll-target="#bbox_overlap"><code>bbox_overlap</code></a></li>
-  <li><a href="#cellarea" id="toc-cellarea" class="nav-link" data-scroll-target="#cellarea"><code>cellArea</code></a></li>
-  <li><a href="#cor" id="toc-cor" class="nav-link" data-scroll-target="#cor"><code>cor</code></a></li>
-  <li><a href="#dline" id="toc-dline" class="nav-link" data-scroll-target="#dline"><code>dLine</code></a></li>
-  <li><a href="#deg2xy" id="toc-deg2xy" class="nav-link" data-scroll-target="#deg2xy"><code>deg2xy</code></a></li>
-  <li><a href="#dem_angle_maxelevation" id="toc-dem_angle_maxelevation" class="nav-link" data-scroll-target="#dem_angle_maxelevation"><code>dem_angle_MaxElevation</code></a></li>
-  <li><a href="#dem_slope" id="toc-dem_slope" class="nav-link" data-scroll-target="#dem_slope"><code>dem_slope</code></a></li>
-  <li><a href="#direction" id="toc-direction" class="nav-link" data-scroll-target="#direction"><code>direction</code></a></li>
-  <li><a href="#direction_e" id="toc-direction_e" class="nav-link" data-scroll-target="#direction_e"><code>direction_E</code></a></li>
-  <li><a href="#direction_n" id="toc-direction_n" class="nav-link" data-scroll-target="#direction_n"><code>direction_N</code></a></li>
-  <li><a href="#earth_dist" id="toc-earth_dist" class="nav-link" data-scroll-target="#earth_dist"><code>earth_dist</code></a></li>
-  <li><a href="#fliplr" id="toc-fliplr" class="nav-link" data-scroll-target="#fliplr"><code>fliplr</code></a></li>
-  <li><a href="#flipud" id="toc-flipud" class="nav-link" data-scroll-target="#flipud"><code>flipud</code></a></li>
-  <li><a href="#gdal_info" id="toc-gdal_info" class="nav-link" data-scroll-target="#gdal_info"><code>gdal_info</code></a></li>
-  <li><a href="#gdal_nodata" id="toc-gdal_nodata" class="nav-link" data-scroll-target="#gdal_nodata"><code>gdal_nodata</code></a></li>
-  <li><a href="#gdal_polygonize" id="toc-gdal_polygonize" class="nav-link" data-scroll-target="#gdal_polygonize"><code>gdal_polygonize</code></a></li>
-  <li><a href="#gdalinfo" id="toc-gdalinfo" class="nav-link" data-scroll-target="#gdalinfo"><code>gdalinfo</code></a></li>
-  <li><a href="#getgeotransform" id="toc-getgeotransform" class="nav-link" data-scroll-target="#getgeotransform"><code>getgeotransform</code></a></li>
-  <li><a href="#guanshan_dem" id="toc-guanshan_dem" class="nav-link" data-scroll-target="#guanshan_dem"><code>guanshan_dem</code></a></li>
-  <li><a href="#guanshan_flowdir_cpp" id="toc-guanshan_flowdir_cpp" class="nav-link" data-scroll-target="#guanshan_flowdir_cpp"><code>guanshan_flowdir_cpp</code></a></li>
-  <li><a href="#guanshan_flowdir_gis" id="toc-guanshan_flowdir_gis" class="nav-link" data-scroll-target="#guanshan_flowdir_gis"><code>guanshan_flowdir_gis</code></a></li>
-  <li><a href="#in_bbox" id="toc-in_bbox" class="nav-link" data-scroll-target="#in_bbox"><code>in_bbox</code></a></li>
-  <li><a href="#intersect" id="toc-intersect" class="nav-link" data-scroll-target="#intersect"><code>intersect</code></a></li>
-  <li><a href="#isscalar" id="toc-isscalar" class="nav-link" data-scroll-target="#isscalar"><code>isscalar</code></a></li>
-  <li><a href="#line_end" id="toc-line_end" class="nav-link" data-scroll-target="#line_end"><code>line_end</code></a></li>
-  <li><a href="#line_start" id="toc-line_start" class="nav-link" data-scroll-target="#line_start"><code>line_start</code></a></li>
-  <li><a href="#make_rast" id="toc-make_rast" class="nav-link" data-scroll-target="#make_rast"><code>make_rast</code></a></li>
-  <li><a href="#median" id="toc-median" class="nav-link" data-scroll-target="#median"><code>median</code></a></li>
-  <li><a href="#merge_var" id="toc-merge_var" class="nav-link" data-scroll-target="#merge_var"><code>merge_var</code></a></li>
-  <li><a href="#merge_var-1" id="toc-merge_var-1" class="nav-link" data-scroll-target="#merge_var-1"><code>merge_var!</code></a></li>
-  <li><a href="#meshgrid" id="toc-meshgrid" class="nav-link" data-scroll-target="#meshgrid"><code>meshgrid</code></a></li>
-  <li><a href="#nband" id="toc-nband" class="nav-link" data-scroll-target="#nband"><code>nband</code></a></li>
-  <li><a href="#nlayer" id="toc-nlayer" class="nav-link" data-scroll-target="#nlayer"><code>nlayer</code></a></li>
-  <li><a href="#nlyr" id="toc-nlyr" class="nav-link" data-scroll-target="#nlyr"><code>nlyr</code></a></li>
-  <li><a href="#ogr_info" id="toc-ogr_info" class="nav-link" data-scroll-target="#ogr_info"><code>ogr_info</code></a></li>
-  <li><a href="#range2bbox" id="toc-range2bbox" class="nav-link" data-scroll-target="#range2bbox"><code>range2bbox</code></a></li>
-  <li><a href="#rast" id="toc-rast" class="nav-link" data-scroll-target="#rast"><code>rast</code></a></li>
-  <li><a href="#read_gdal" id="toc-read_gdal" class="nav-link" data-scroll-target="#read_gdal"><code>read_gdal</code></a></li>
-  <li><a href="#read_sf" id="toc-read_sf" class="nav-link" data-scroll-target="#read_sf"><code>read_sf</code></a></li>
-  <li><a href="#resample_first" id="toc-resample_first" class="nav-link" data-scroll-target="#resample_first"><code>resample_first</code></a></li>
-  <li><a href="#rm_shp" id="toc-rm_shp" class="nav-link" data-scroll-target="#rm_shp"><code>rm_shp</code></a></li>
-  <li><a href="#set_bandnames" id="toc-set_bandnames" class="nav-link" data-scroll-target="#set_bandnames"><code>set_bandnames</code></a></li>
-  <li><a href="#st_bbox" id="toc-st_bbox" class="nav-link" data-scroll-target="#st_bbox"><code>st_bbox</code></a></li>
-  <li><a href="#st_cellsize" id="toc-st_cellsize" class="nav-link" data-scroll-target="#st_cellsize"><code>st_cellsize</code></a></li>
-  <li><a href="#st_coords" id="toc-st_coords" class="nav-link" data-scroll-target="#st_coords"><code>st_coords</code></a></li>
-  <li><a href="#st_crop" id="toc-st_crop" class="nav-link" data-scroll-target="#st_crop"><code>st_crop</code></a></li>
-  <li><a href="#st_dims" id="toc-st_dims" class="nav-link" data-scroll-target="#st_dims"><code>st_dims</code></a></li>
-  <li><a href="#st_extract" id="toc-st_extract" class="nav-link" data-scroll-target="#st_extract"><code>st_extract</code></a></li>
-  <li><a href="#st_location-1" id="toc-st_location-1" class="nav-link" data-scroll-target="#st_location-1"><code>st_location</code></a></li>
-  <li><a href="#st_location_exact" id="toc-st_location_exact" class="nav-link" data-scroll-target="#st_location_exact"><code>st_location_exact</code></a></li>
-  <li><a href="#st_mosaic" id="toc-st_mosaic" class="nav-link" data-scroll-target="#st_mosaic"><code>st_mosaic</code></a></li>
-  <li><a href="#st_points" id="toc-st_points" class="nav-link" data-scroll-target="#st_points"><code>st_points</code></a></li>
-  <li><a href="#st_read" id="toc-st_read" class="nav-link" data-scroll-target="#st_read"><code>st_read</code></a></li>
-  <li><a href="#st_write" id="toc-st_write" class="nav-link" data-scroll-target="#st_write"><code>st_write</code></a></li>
-  <li><a href="#sun_shade" id="toc-sun_shade" class="nav-link" data-scroll-target="#sun_shade"><code>sun_shade</code></a></li>
-  <li><a href="#time2local" id="toc-time2local" class="nav-link" data-scroll-target="#time2local"><code>time2local</code></a></li>
-  <li><a href="#write_gdal" id="toc-write_gdal" class="nav-link" data-scroll-target="#write_gdal"><code>write_gdal</code></a></li>
-  <li><a href="#write_sf" id="toc-write_sf" class="nav-link" data-scroll-target="#write_sf"><code>write_sf</code></a></li>
-  </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/jl-pkgs/SpatialRasterLite.jl/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -593,735 +470,633 @@ window.onload = function () {
 
 
 <p><em>Docstrings for SpatialRasterLite.</em></p>
-<section id="abstractspatraster" class="level2">
-<h2 class="anchored" data-anchor-id="abstractspatraster"><code>AbstractSpatRaster</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
+<div class="markdown"><h2 class="anchored">`AbstractSpatRaster`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
 <p>No documentation found for public binding <code>SpatialRasterLite.AbstractSpatRaster</code>.</p>
-<section id="summary" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="summary">Summary</h3>
-<pre><code>abstract type AbstractSpatRaster{T, N}</code></pre>
-</section>
-<section id="subtypes" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="subtypes">Subtypes</h3>
-<pre><code>SpatRaster{T, N}</code></pre>
-</section>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="point" class="level2">
-<h2 class="anchored" data-anchor-id="point"><code>Point</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
+<h3 class="anchored">Summary {.unnumbered}</h3>
+<pre><code>abstract type SpatialRasterLite.AbstractSpatRaster{T, N}</code></pre>
+<h3 class="anchored">Subtypes {.unnumbered}</h3>
+<pre><code>SpatialRasterLite.SpatRaster{T, N}</code></pre>
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`Point`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
 <p>No documentation found for public binding <code>SpatialRasterLite.Point</code>.</p>
-<section id="summary-1" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="summary-1">Summary</h3>
-<pre><code>mutable struct Point{T}</code></pre>
-</section>
-<section id="fields" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="fields">Fields</h3>
+<h3 class="anchored">Summary {.unnumbered}</h3>
+<pre><code>mutable struct SpatialRasterLite.Point{T}</code></pre>
+<h3 class="anchored">Fields {.unnumbered}</h3>
 <pre><code>x :: T
 y :: T</code></pre>
-</section>
-<section id="supertype-hierarchy" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="supertype-hierarchy">Supertype Hierarchy</h3>
-<pre><code>Point{T} &lt;: SpatialRasterLite.AbstractPoint{T} &lt;: Any</code></pre>
-</section>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="point3" class="level2">
-<h2 class="anchored" data-anchor-id="point3"><code>Point3</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
+<h3 class="anchored">Supertype Hierarchy {.unnumbered}</h3>
+<pre><code>SpatialRasterLite.Point{T} &lt;: SpatialRasterLite.AbstractPoint{T} &lt;: Any</code></pre>
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`Point3`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
 <p>No documentation found for public binding <code>SpatialRasterLite.Point3</code>.</p>
-<section id="summary-2" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="summary-2">Summary</h3>
-<pre><code>mutable struct Point3{T}</code></pre>
-</section>
-<section id="fields-1" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="fields-1">Fields</h3>
+<h3 class="anchored">Summary {.unnumbered}</h3>
+<pre><code>mutable struct SpatialRasterLite.Point3{T}</code></pre>
+<h3 class="anchored">Fields {.unnumbered}</h3>
 <pre><code>x :: T
 y :: T
 z :: T</code></pre>
-</section>
-<section id="supertype-hierarchy-1" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="supertype-hierarchy-1">Supertype Hierarchy</h3>
-<pre><code>Point3{T} &lt;: SpatialRasterLite.AbstractPoint{T} &lt;: Any</code></pre>
-</section>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="rastersize" class="level2">
-<h2 class="anchored" data-anchor-id="rastersize"><code>RasterSize</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
+<h3 class="anchored">Supertype Hierarchy {.unnumbered}</h3>
+<pre><code>SpatialRasterLite.Point3{T} &lt;: SpatialRasterLite.AbstractPoint{T} &lt;: Any</code></pre>
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`RasterSize`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
 <p>No documentation found for public binding <code>SpatialRasterLite.RasterSize</code>.</p>
-<section id="summary-3" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="summary-3">Summary</h3>
-<pre><code>mutable struct RasterSize</code></pre>
-</section>
-<section id="fields-2" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="fields-2">Fields</h3>
-<pre><code>b        :: bbox
+<h3 class="anchored">Summary {.unnumbered}</h3>
+<pre><code>mutable struct SpatialRasterLite.RasterSize</code></pre>
+<h3 class="anchored">Fields {.unnumbered}</h3>
+<pre><code>b        :: SpatialRasterLite.bbox
 cellsize :: Tuple{Float64, Float64}
 nx       :: Int64
 ny       :: Int64</code></pre>
-</section>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="svf" class="level2">
-<h2 class="anchored" data-anchor-id="svf"><code>SVF</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`SVF`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
 <ul>
-<li><code>Φ_slope</code>: in [deg], 天文学方位角，正北为0</li>
-<li><code>β_slope</code>: in [deg], 坡面角度</li>
+<li><p><code>Φ_slope</code>: in [deg], 天文学方位角，正北为0</p>
+</li>
+<li><p><code>β_slope</code>: in [deg], 坡面角度</p>
+</li>
 </ul>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="svf_azimuth" class="level2">
-<h2 class="anchored" data-anchor-id="svf_azimuth"><code>SVF_azimuth</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
+
+
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`SVF_azimuth`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
 <p>No documentation found for public binding <code>SpatialRasterLite.SVF_azimuth</code>.</p>
 <p><code>SpatialRasterLite.SVF_azimuth</code> is a <code>Function</code>.</p>
 <pre><code># 1 method for generic function "SVF_azimuth" from SpatialRasterLite:
  [1] SVF_azimuth(Φ_sun::T, Φ_slope::T, β_slope::T, zenith_max::T) where T&lt;:Real
      @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/terrain/sky_view_factor.jl:5</code></pre>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="svf_azimuth_simple" class="level2">
-<h2 class="anchored" data-anchor-id="svf_azimuth_simple"><code>SVF_azimuth_simple</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`SVF_azimuth_simple`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
 <p>No documentation found for public binding <code>SpatialRasterLite.SVF_azimuth_simple</code>.</p>
 <p><code>SpatialRasterLite.SVF_azimuth_simple</code> is a <code>Function</code>.</p>
 <pre><code># 1 method for generic function "SVF_azimuth_simple" from SpatialRasterLite:
  [1] SVF_azimuth_simple(zenith_max::T) where T&lt;:Real
      @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/terrain/sky_view_factor.jl:15</code></pre>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="spatraster" class="level2">
-<h2 class="anchored" data-anchor-id="spatraster"><code>SpatRaster</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`SpatRaster`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
 <ul>
-<li><code>A::AbstractArray</code></li>
-<li><code>b::bbox</code></li>
-<li><code>cellsize::Tuple{Real, Real}</code></li>
-<li><code>lon::AbstractVector{&lt;:Real}</code></li>
-<li><code>lat::AbstractVector{&lt;:Real}</code></li>
-<li><code>time::Union{Nothing, AbstractVector}</code></li>
-<li><code>bands::Union{Nothing, AbstractVector{String}}</code></li>
-<li><code>name::String</code></li>
-<li><code>nodata::Union{Nothing, AbstractVector{T}} where T</code></li>
+<li><p><code>A::AbstractArray</code></p>
+</li>
+<li><p><code>b::SpatialRasterLite.bbox</code></p>
+</li>
+<li><p><code>cellsize::Tuple{Real, Real}</code></p>
+</li>
+<li><p><code>lon::AbstractVector{&lt;:Real}</code></p>
+</li>
+<li><p><code>lat::AbstractVector{&lt;:Real}</code></p>
+</li>
+<li><p><code>time::Union{Nothing, AbstractVector}</code></p>
+</li>
+<li><p><code>bands::Union{Nothing, AbstractVector{String}}</code></p>
+</li>
+<li><p><code>name::String</code></p>
+</li>
+<li><p><code>nodata::Union{Nothing, AbstractVector{T}} where T</code></p>
+</li>
 </ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">SpatRaster</span>(A, b<span class="op">::</span><span class="dt">bbox</span>; reverse_lat<span class="op">=</span><span class="cn">true</span>, kw<span class="op">...</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+
+
+<pre><code class="language-julia">SpatRaster(A, b::bbox; reverse_lat=true, kw...)</code></pre>
 <ul>
-<li><code>kw</code>: other parameters: <code>time</code>, <code>name</code></li>
+<li><p><code>kw</code>: other parameters: <code>time</code>, <code>name</code></p>
+</li>
 </ul>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="spatialrasterlite" class="level2">
-<h2 class="anchored" data-anchor-id="spatialrasterlite"><code>SpatialRasterLite</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
+
+
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`SpatialRasterLite`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
 <p>No docstring found for public module <code>SpatialRasterLite</code>.</p>
-<section id="public-names" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="public-names">Public names</h3>
+<h3 class="anchored">Public names {.unnumbered}</h3>
 <p><code>AbstractSpatRaster</code>, <code>Point</code>, <code>Point3</code>, <code>RasterSize</code>, <code>SVF</code>, <code>SVF_azimuth</code>, <code>SVF_azimuth_simple</code>, <code>SpatRaster</code>, <code>_st_location</code>, <code>angle_SolarDeclination</code>, <code>angle_SunAzimuth</code>, <code>angle_SunElevation</code>, <code>azimuth2deg</code>, <code>azimuth2slope</code>, <code>azimuth2xy</code>, <code>bandnames</code>, <code>bbox</code>, <code>bbox2cellsize</code>, <code>bbox2dims</code>, <code>bbox2lims</code>, <code>bbox2ndim</code>, <code>bbox2range</code>, <code>bbox2vec</code>, <code>bbox_overlap</code>, <code>cellArea</code>, <code>cor</code>, <code>dLine</code>, <code>deg2xy</code>, <code>dem_angle_MaxElevation</code>, <code>dem_slope</code>, <code>direction</code>, <code>direction_E</code>, <code>direction_N</code>, <code>earth_dist</code>, <code>fliplr</code>, <code>flipud</code>, <code>gdal_info</code>, <code>gdal_nodata</code>, <code>gdal_polygonize</code>, <code>gdalinfo</code>, <code>getgeotransform</code>, <code>guanshan_dem</code>, <code>guanshan_flowdir_cpp</code>, <code>guanshan_flowdir_gis</code>, <code>in_bbox</code>, <code>intersect</code>, <code>isscalar</code>, <code>line_end</code>, <code>line_start</code>, <code>make_rast</code>, <code>median</code>, <code>merge_var</code>, <code>merge_var!</code>, <code>meshgrid</code>, <code>nband</code>, <code>nlayer</code>, <code>nlyr</code>, <code>ogr_info</code>, <code>range2bbox</code>, <code>rast</code>, <code>read_gdal</code>, <code>read_sf</code>, <code>resample_first</code>, <code>rm_shp</code>, <code>set_bandnames</code>, <code>st_bbox</code>, <code>st_cellsize</code>, <code>st_coords</code>, <code>st_crop</code>, <code>st_dims</code>, <code>st_extract</code>, <code>st_location</code>, <code>st_location_exact</code>, <code>st_mosaic</code>, <code>st_points</code>, <code>st_read</code>, <code>st_write</code>, <code>sun_shade</code>, <code>time2local</code>, <code>write_gdal</code>, <code>write_sf</code></p>
 <hr>
 <p><em>Package description from <code>README.md</code>:</em></p>
-</section>
-<section id="spatialrasterlite.jl-simple-spatial-rasters-in-julia" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="spatialrasterlite.jl-simple-spatial-rasters-in-julia">SpatialRasterLite.jl: Simple Spatial Rasters in Julia</h3>
-<p>&lt;!– <a href="https://jl-pkgs.github.io/SpatialRasterLite.jl/stable"><img src="https://img.shields.io/badge/docs-stable-blue.svg" class="img-fluid" alt="Stable"></a> –&gt; <a href="https://jl-pkgs.github.io/SpatialRasterLite.jl/dev"><img src="https://img.shields.io/badge/docs-dev-blue.svg" class="img-fluid" alt="Dev"></a> <a href="https://github.com/jl-pkgs/SpatialRasterLite.jl/actions/workflows/CI.yml"><img src="https://github.com/jl-pkgs/SpatialRasterLite.jl/actions/workflows/CI.yml/badge.svg" class="img-fluid" alt="CI"></a> <a href="https://app.codecov.io/gh/jl-pkgs/SpatialRasterLite.jl/tree/master"><img src="https://codecov.io/gh/jl-pkgs/SpatialRasterLite.jl/branch/master/graph/badge.svg" class="img-fluid" alt="Codecov"></a></p>
+<h3 class="anchored">SpatialRasterLite.jl: Simple Spatial Rasters in Julia {.unnumbered}</h3>
+<p>&lt;!– <a href="https://jl-pkgs.github.io/SpatialRasterLite.jl/stable"><img src="https://img.shields.io/badge/docs-stable-blue.svg" alt="Stable"></a> –&gt; <a href="https://jl-pkgs.github.io/SpatialRasterLite.jl/dev"><img src="https://img.shields.io/badge/docs-dev-blue.svg" alt="Dev"></a> <a href="https://github.com/jl-pkgs/SpatialRasterLite.jl/actions/workflows/CI.yml"><img src="https://github.com/jl-pkgs/SpatialRasterLite.jl/actions/workflows/CI.yml/badge.svg" alt="CI"></a> <a href="https://app.codecov.io/gh/jl-pkgs/SpatialRasterLite.jl/tree/master"><img src="https://codecov.io/gh/jl-pkgs/SpatialRasterLite.jl/branch/master/graph/badge.svg" alt="Codecov"></a></p>
 <blockquote class="blockquote">
 <p>Dongdong Kong</p>
 </blockquote>
 <p><code>SpatRaster</code> is a simple spatial raster with WGS84 projection, abbreviated as <code>rast</code>.</p>
-<p>Due to its simplicity, <code>SpatialRasterLite.jl</code> doesn’t rely on any other geospatial packages, which makes <code>SpatialRasterLite.jl</code> more lightweight than <code>GeoArrays</code> and <code>Rasters.jl</code>.</p>
+<p>Due to its simplicity, <code>SpatialRasterLite.jl</code> doesn't rely on any other geospatial packages, which makes <code>SpatialRasterLite.jl</code> more lightweight than <code>GeoArrays</code> and <code>Rasters.jl</code>.</p>
 <p><code>SpatialRasterLite.jl</code> used the class and function name of R language <code>terra</code> and <code>sf</code> packages.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ex">julia</span> <span class="at">-e</span> <span class="st">"@time using SpatialRasterLite"</span></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="co"># 0.053372 seconds (50.83 k allocations: 3.506 MiB, 8.44% compilation time)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<section id="functions" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="functions">Functions</h4>
-<p>This package is used to support spatial interpolations in <code>SpatInterp.jl</code> and <code>MGWR.jl</code>. They implemented: &lt;!– <em>Interpolation (point to raster)</em> –&gt;</p>
-<ul class="task-list">
-<li><label><input type="checkbox" checked="">Thin Plate Spline Interpolation (tps)</label></li>
-<li><label><input type="checkbox" checked="">Angular Distance Weighting Interpolation (adw)</label></li>
-<li><label><input type="checkbox" checked="">Inverse Distance Weighting Interpolation (idw)</label></li>
-<li><label><input type="checkbox" checked="">Nearest Interpolation (nearest)</label></li>
-<li><label><input type="checkbox" checked="">Bilinear Interpolation</label></li>
-<li><label><input type="checkbox" checked="">Irregular Bilinear Interpolation, referred to <code>pyresample</code></label></li>
-<li><label><input type="checkbox" checked="">Mixed Geographically Weighted Regression</label></li>
+<pre><code class="language-bash">julia -e "@time using SpatialRasterLite"
+# 0.053372 seconds (50.83 k allocations: 3.506 MiB, 8.44% compilation time)</code></pre>
+<h4 class="anchored">Functions {.unnumbered}</h4>
+<p>This package is used to support spatial interpolations in <code>SpatInterp.jl</code> and <code>MGWR.jl</code>.  They implemented: &lt;!– <em>Interpolation (point to raster)</em> –&gt;</p>
+<ul>
+<li><p>[x] Thin Plate Spline Interpolation (tps)</p>
+</li>
+<li><p>[x] Angular Distance Weighting Interpolation (adw)</p>
+</li>
+<li><p>[x] Inverse Distance Weighting Interpolation (idw)</p>
+</li>
+<li><p>[x] Nearest Interpolation (nearest)</p>
+</li>
+<li><p>[x] Bilinear Interpolation</p>
+</li>
+<li><p>[x] Irregular Bilinear Interpolation, referred to <code>pyresample</code></p>
+</li>
+<li><p>[x] Mixed Geographically Weighted Regression </p>
+</li>
 </ul>
 <p><em>Terrain</em></p>
-<ul class="task-list">
-<li><label><input type="checkbox" checked="">Sky view factor (SVF)</label></li>
-<li><label><input type="checkbox" checked="">sun shade</label></li>
+<ul>
+<li><p>[x] Sky view factor (SVF)</p>
+</li>
+<li><p>[x] sun shade</p>
+</li>
 </ul>
 <p><em>methods</em></p>
-<ul class="task-list">
-<li><label><input type="checkbox" checked=""><code>intersect</code> (line &amp; raster)</label></li>
-</ul>
-</section>
-</section>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="st_location" class="level2">
-<h2 class="anchored" data-anchor-id="st_location"><code>_st_location</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">st_location</span>(r<span class="op">::</span><span class="dt">Raster</span>, points<span class="op">::</span><span class="dt">Vector{Tuple{T,T}}</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>return the overlaping indexes <code>inds</code>, and corresponding (i,j)</p>
-<section id="examples" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="examples">Examples</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>inds, locs <span class="op">=</span> <span class="fu">st_location</span>(r, points)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="angle_solardeclination" class="level2">
-<h2 class="anchored" data-anchor-id="angle_solardeclination"><code>angle_SolarDeclination</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">angle_SolarDeclination</span>(J; to_deg<span class="op">=</span><span class="cn">false</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<section id="arguments" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="arguments">Arguments</h3>
 <ul>
-<li>σ: Solar Declination Angle, 黄赤交角（太阳赤纬角）</li>
+<li><p>[x] <code>intersect</code> (line &amp; raster)</p>
+</li>
 </ul>
-</section>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="angle_sunazimuth" class="level2">
-<h2 class="anchored" data-anchor-id="angle_sunazimuth"><code>angle_SunAzimuth</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`_st_location`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
+<pre><code class="language-julia">st_location(r::Raster, points::Vector{Tuple{T,T}})</code></pre>
+<p>return the overlaping indexes <code>inds</code>, and corresponding (i,j)</p>
+<h3 class="anchored">Examples {.unnumbered}</h3>
+<pre><code class="language-julia">inds, locs = st_location(r, points)</code></pre>
+
+
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`angle_SolarDeclination`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
+<pre><code class="language-julia">angle_SolarDeclination(J; to_deg=false)</code></pre>
+<h3 class="anchored">Arguments {.unnumbered}</h3>
+<ul>
+<li><p>σ: Solar Declination Angle, 黄赤交角（太阳赤纬角）</p>
+</li>
+</ul>
+
+
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`angle_SunAzimuth`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
 <p>太阳方位角，正北为0°，正东为90°</p>
-<section id="references" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="references">References</h4>
-<ol type="1">
-<li>https://www.suncalc.org/#/26.9025,120,3/2025.07.25/17:14/1/3</li>
+<h4 class="anchored">References {.unnumbered}</h4>
+<ol>
+<li><p>https://www.suncalc.org/#/26.9025,120,3/2025.07.25/17:14/1/3</p>
+</li>
 </ol>
-</section>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="angle_sunelevation" class="level2">
-<h2 class="anchored" data-anchor-id="angle_sunelevation"><code>angle_SunElevation</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
+
+
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`angle_SunElevation`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
 <p>任一点，任一时刻的太阳高度角</p>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="azimuth2deg" class="level2">
-<h2 class="anchored" data-anchor-id="azimuth2deg"><code>azimuth2deg</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
+
+
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`azimuth2deg`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
 <p>方位角转换为数学角度，限定在0-360°</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>  <span class="ex">0</span> <span class="at">-</span><span class="op">&gt;</span>   90</span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a> <span class="ex">90</span> <span class="at">-</span><span class="op">&gt;</span>    0</span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="ex">180</span> <span class="at">-</span><span class="op">&gt;</span>  -90</span>
-<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="ex">270</span> <span class="at">-</span><span class="op">&gt;</span> -180</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="azimuth2slope" class="level2">
-<h2 class="anchored" data-anchor-id="azimuth2slope"><code>azimuth2slope</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
+<pre><code class="language-bash">  0 -&gt;   90
+ 90 -&gt;    0
+180 -&gt;  -90
+270 -&gt; -180</code></pre>
+
+
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`azimuth2slope`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
 <p>No documentation found for public binding <code>SpatialRasterLite.azimuth2slope</code>.</p>
 <p><code>SpatialRasterLite.azimuth2slope</code> is a <code>Function</code>.</p>
 <pre><code># 1 method for generic function "azimuth2slope" from SpatialRasterLite:
  [1] azimuth2slope(ψ)
      @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/terrain/angle.jl:23</code></pre>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="azimuth2xy" class="level2">
-<h2 class="anchored" data-anchor-id="azimuth2xy"><code>azimuth2xy</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`azimuth2xy`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
 <p>No documentation found for public binding <code>SpatialRasterLite.azimuth2xy</code>.</p>
 <p><code>SpatialRasterLite.azimuth2xy</code> is a <code>Function</code>.</p>
 <pre><code># 1 method for generic function "azimuth2xy" from SpatialRasterLite:
  [1] azimuth2xy(Φ::Real; verbose)
      @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/terrain/angle.jl:25</code></pre>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="bandnames" class="level2">
-<h2 class="anchored" data-anchor-id="bandnames"><code>bandnames</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`bandnames`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
 <p>No documentation found for public binding <code>SpatialRasterLite.bandnames</code>.</p>
 <p><code>SpatialRasterLite.bandnames</code> is a <code>Function</code>.</p>
 <pre><code># 0 methods for generic function "bandnames" from SpatialRasterLite</code></pre>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="bbox" class="level2">
-<h2 class="anchored" data-anchor-id="bbox"><code>bbox</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">bbox</span>(xmin, ymin, xmax, ymax)</span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="fu">bbox</span>(;xmin, ymin, xmax, ymax)</span>
-<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="fu">bbox2tuple</span>(b<span class="op">::</span><span class="dt">bbox</span>)</span>
-<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="fu">bbox2vec</span>(b<span class="op">::</span><span class="dt">bbox</span>)</span>
-<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a><span class="fu">bbox2affine</span>(size<span class="op">::</span><span class="dt">Tuple{Integer, Integer}</span>, b<span class="op">::</span><span class="dt">bbox</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`bbox`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
+<pre><code class="language-julia">bbox(xmin, ymin, xmax, ymax)
+bbox(;xmin, ymin, xmax, ymax)
+bbox2tuple(b::bbox)
+bbox2vec(b::bbox)
+bbox2affine(size::Tuple{Integer, Integer}, b::bbox)</code></pre>
 <p>Spatial bounding box</p>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="bbox2cellsize" class="level2">
-<h2 class="anchored" data-anchor-id="bbox2cellsize"><code>bbox2cellsize</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
+
+
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`bbox2cellsize`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
 <p>No documentation found for public binding <code>SpatialRasterLite.bbox2cellsize</code>.</p>
 <p><code>SpatialRasterLite.bbox2cellsize</code> is a <code>Function</code>.</p>
 <pre><code># 1 method for generic function "bbox2cellsize" from SpatialRasterLite:
- [1] bbox2cellsize(b::bbox, size)
+ [1] bbox2cellsize(b::SpatialRasterLite.bbox, size)
      @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/bbox.jl:19</code></pre>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="bbox2dims" class="level2">
-<h2 class="anchored" data-anchor-id="bbox2dims"><code>bbox2dims</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb24"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">bbox2dims</span>(b<span class="op">::</span><span class="dt">bbox</span>; size<span class="op">=</span><span class="cn">nothing</span>, cellsize<span class="op">=</span><span class="cn">nothing</span>, reverse_lat<span class="op">=</span><span class="cn">true</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<section id="arguments-1" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="arguments-1">Arguments</h3>
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`bbox2dims`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
+<pre><code class="language-julia">bbox2dims(b::bbox; size=nothing, cellsize=nothing, reverse_lat=true)</code></pre>
+<h3 class="anchored">Arguments {.unnumbered}</h3>
 <ul>
-<li><code>cellsize</code>: celly为负，则lat倒序</li>
+<li><p><code>cellsize</code>: celly为负，则lat倒序</p>
+</li>
 </ul>
-</section>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="bbox2lims" class="level2">
-<h2 class="anchored" data-anchor-id="bbox2lims"><code>bbox2lims</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
+
+
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`bbox2lims`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
 <p>No documentation found for public binding <code>SpatialRasterLite.bbox2lims</code>.</p>
 <p><code>SpatialRasterLite.bbox2lims</code> is a <code>Function</code>.</p>
 <pre><code># 1 method for generic function "bbox2lims" from SpatialRasterLite:
- [1] bbox2lims(b::bbox)
+ [1] bbox2lims(b::SpatialRasterLite.bbox)
      @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/bbox.jl:65</code></pre>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="bbox2ndim" class="level2">
-<h2 class="anchored" data-anchor-id="bbox2ndim"><code>bbox2ndim</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`bbox2ndim`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
 <p>No documentation found for public binding <code>SpatialRasterLite.bbox2ndim</code>.</p>
 <p><code>SpatialRasterLite.bbox2ndim</code> is a <code>Function</code>.</p>
 <pre><code># 1 method for generic function "bbox2ndim" from SpatialRasterLite:
  [1] bbox2ndim(b; size, cellsize)
      @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/bbox.jl:48</code></pre>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="bbox2range" class="level2">
-<h2 class="anchored" data-anchor-id="bbox2range"><code>bbox2range</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`bbox2range`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
 <p>No documentation found for public binding <code>SpatialRasterLite.bbox2range</code>.</p>
 <p><code>SpatialRasterLite.bbox2range</code> is a <code>Function</code>.</p>
 <pre><code># 1 method for generic function "bbox2range" from SpatialRasterLite:
- [1] bbox2range(b::bbox)
+ [1] bbox2range(b::SpatialRasterLite.bbox)
      @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/bbox.jl:62</code></pre>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="bbox2vec" class="level2">
-<h2 class="anchored" data-anchor-id="bbox2vec"><code>bbox2vec</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`bbox2vec`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
 <p>No documentation found for public binding <code>SpatialRasterLite.bbox2vec</code>.</p>
 <p><code>SpatialRasterLite.bbox2vec</code> is a <code>Function</code>.</p>
 <pre><code># 1 method for generic function "bbox2vec" from SpatialRasterLite:
- [1] bbox2vec(b::bbox)
+ [1] bbox2vec(b::SpatialRasterLite.bbox)
      @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/bbox.jl:64</code></pre>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="bbox_overlap" class="level2">
-<h2 class="anchored" data-anchor-id="bbox_overlap"><code>bbox_overlap</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`bbox_overlap`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
 <p>No documentation found for public binding <code>SpatialRasterLite.bbox_overlap</code>.</p>
 <p><code>SpatialRasterLite.bbox_overlap</code> is a <code>Function</code>.</p>
 <pre><code># 1 method for generic function "bbox_overlap" from SpatialRasterLite:
- [1] bbox_overlap(b::bbox, box::bbox; size, cellsize, reverse_lat, zip)
+ [1] bbox_overlap(b::SpatialRasterLite.bbox, box::SpatialRasterLite.bbox; size, cellsize, reverse_lat, zip)
      @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/bbox.jl:69</code></pre>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="cellarea" class="level2">
-<h2 class="anchored" data-anchor-id="cellarea"><code>cellArea</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`cellArea`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
 <p>No documentation found for public binding <code>SpatialRasterLite.cellArea</code>.</p>
 <p><code>SpatialRasterLite.cellArea</code> is a <code>Function</code>.</p>
 <pre><code># 1 method for generic function "cellArea" from SpatialRasterLite:
  [1] cellArea(x, y, cellsize)
      @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/SpatialRasterLite.jl:109</code></pre>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="cor" class="level2">
-<h2 class="anchored" data-anchor-id="cor"><code>cor</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb31"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(x<span class="op">::</span><span class="dt">AbstractVector</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`cor`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
+<pre><code class="language-julia">cor(x::AbstractVector)</code></pre>
 <p>Return the number one.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb32"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(X<span class="op">::</span><span class="dt">AbstractMatrix</span>; dims<span class="op">::</span><span class="dt">Int</span>=<span class="fl">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+
+
+<pre><code class="language-julia">cor(X::AbstractMatrix; dims::Int=1)</code></pre>
 <p>Compute the Pearson correlation matrix of the matrix <code>X</code> along the dimension <code>dims</code>.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb33"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(x<span class="op">::</span><span class="dt">AbstractVector</span>, y<span class="op">::</span><span class="dt">AbstractVector</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+
+
+<pre><code class="language-julia">cor(x::AbstractVector, y::AbstractVector)</code></pre>
 <p>Compute the Pearson correlation between the vectors <code>x</code> and <code>y</code>.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb34"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(X<span class="op">::</span><span class="dt">AbstractVecOrMat</span>, Y<span class="op">::</span><span class="dt">AbstractVecOrMat</span>; dims<span class="op">=</span><span class="fl">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+
+
+<pre><code class="language-julia">cor(X::AbstractVecOrMat, Y::AbstractVecOrMat; dims=1)</code></pre>
 <p>Compute the Pearson correlation between the vectors or matrices <code>X</code> and <code>Y</code> along the dimension <code>dims</code>.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb35"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(X, w<span class="op">::</span><span class="dt">AbstractWeights</span>, dims<span class="op">=</span><span class="fl">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Compute the Pearson correlation matrix of <code>X</code> along the dimension <code>dims</code> with a weighting <code>w</code> .</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb36"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(ce<span class="op">::</span><span class="dt">CovarianceEstimator</span>, x<span class="op">::</span><span class="dt">AbstractVector</span>, y<span class="op">::</span><span class="dt">AbstractVector</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Compute the correlation of the vectors <code>x</code> and <code>y</code> using estimator <code>ce</code>.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb37"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(ce<span class="op">::</span><span class="dt">CovarianceEstimator</span>, X<span class="op">::</span><span class="dt">AbstractMatrix</span>, [w<span class="op">::</span><span class="dt">AbstractWeights</span>];</span>
-<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>    mean<span class="op">=</span><span class="cn">nothing</span>, dims<span class="op">::</span><span class="dt">Int</span>=<span class="fl">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Compute the correlation matrix of the matrix <code>X</code> along dimension <code>dims</code> using estimator <code>ce</code>. A weighting vector <code>w</code> can be specified. The keyword argument <code>mean</code> can be:</p>
-<ul>
-<li><p><code>nothing</code> (default) in which case the mean is estimated and subtracted from the data <code>X</code>,</p></li>
-<li><p>a precalculated mean in which case it is subtracted from the data <code>X</code>. Assuming <code>size(X)</code> is <code>(N,M)</code>, <code>mean</code> can either be:</p>
-<ul>
-<li>when <code>dims=1</code>, an <code>AbstractMatrix</code> of size <code>(1,M)</code>,</li>
-<li>when <code>dims=2</code>, an <code>AbstractVector</code> of length <code>N</code> or an <code>AbstractMatrix</code> of size <code>(N,1)</code>.</li>
-</ul></li>
-</ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb38"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(d<span class="op">::</span><span class="dt">MultivariateDistribution</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Computes the correlation matrix for distribution <code>d</code>.</p>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="dline" class="level2">
-<h2 class="anchored" data-anchor-id="dline"><code>dLine</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
+
+
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`dLine`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
 <p>direction line</p>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="deg2xy" class="level2">
-<h2 class="anchored" data-anchor-id="deg2xy"><code>deg2xy</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
+
+
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`deg2xy`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
 <p>No documentation found for public binding <code>SpatialRasterLite.deg2xy</code>.</p>
 <p><code>SpatialRasterLite.deg2xy</code> is a <code>Function</code>.</p>
 <pre><code># 1 method for generic function "deg2xy" from SpatialRasterLite:
  [1] deg2xy(θ::Real)
      @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/terrain/angle.jl:36</code></pre>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="dem_angle_maxelevation" class="level2">
-<h2 class="anchored" data-anchor-id="dem_angle_maxelevation"><code>dem_angle_MaxElevation</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`dem_angle_MaxElevation`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
 <p>No documentation found for public binding <code>SpatialRasterLite.dem_angle_MaxElevation</code>.</p>
 <p><code>SpatialRasterLite.dem_angle_MaxElevation</code> is a <code>Function</code>.</p>
 <pre><code># 2 methods for generic function "dem_angle_MaxElevation" from SpatialRasterLite:
- [1] dem_angle_MaxElevation(elev::SpatRaster, p0::Point{T}; δψ, radian, rastersize) where T
+ [1] dem_angle_MaxElevation(elev::SpatialRasterLite.SpatRaster, p0::SpatialRasterLite.Point{T}; δψ, radian, rastersize) where T
      @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/terrain/dem_slope.jl:18
- [2] dem_angle_MaxElevation(elev::SpatRaster; δψ, radian)
+ [2] dem_angle_MaxElevation(elev::SpatialRasterLite.SpatRaster; δψ, radian)
      @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/terrain/dem_slope.jl:37</code></pre>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="dem_slope" class="level2">
-<h2 class="anchored" data-anchor-id="dem_slope"><code>dem_slope</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`dem_slope`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
 <p>slope in radian</p>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="direction" class="level2">
-<h2 class="anchored" data-anchor-id="direction"><code>direction</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
+
+
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`direction`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
 <p>No documentation found for public binding <code>SpatialRasterLite.direction</code>.</p>
 <p><code>SpatialRasterLite.direction</code> is a <code>Function</code>.</p>
 <pre><code># 1 method for generic function "direction" from SpatialRasterLite:
  [1] direction(x::T, y::T) where T
      @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/terrain/angle.jl:54</code></pre>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="direction_e" class="level2">
-<h2 class="anchored" data-anchor-id="direction_e"><code>direction_E</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`direction_E`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
 <p>No documentation found for public binding <code>SpatialRasterLite.direction_E</code>.</p>
 <p><code>SpatialRasterLite.direction_E</code> is a <code>Function</code>.</p>
 <pre><code># 1 method for generic function "direction_E" from SpatialRasterLite:
  [1] direction_E(x::Real; eps)
      @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/terrain/angle.jl:44</code></pre>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="direction_n" class="level2">
-<h2 class="anchored" data-anchor-id="direction_n"><code>direction_N</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`direction_N`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
 <p>No documentation found for public binding <code>SpatialRasterLite.direction_N</code>.</p>
 <p><code>SpatialRasterLite.direction_N</code> is a <code>Function</code>.</p>
 <pre><code># 1 method for generic function "direction_N" from SpatialRasterLite:
  [1] direction_N(y::Real; eps)
      @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/terrain/angle.jl:49</code></pre>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="earth_dist" class="level2">
-<h2 class="anchored" data-anchor-id="earth_dist"><code>earth_dist</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb44"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="fu">earth_dist</span>(x1<span class="op">::</span><span class="dt">Matrix</span>, x2<span class="op">::</span><span class="dt">Matrix</span>; R<span class="op">=</span><span class="fl">6378.388</span>)</span>
-<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a><span class="fu">earth_dist</span>(p1<span class="op">::</span><span class="dt">Tuple{FT,FT}</span>, x2<span class="op">::</span><span class="dt">AbstractMatrix</span>; R<span class="op">=</span><span class="fl">6378.388</span>) <span class="kw">where</span> {FT}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb45"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>p1 <span class="op">=</span> [<span class="fl">110</span> <span class="fl">30</span>; <span class="fl">111</span> <span class="fl">31</span>]</span>
-<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>p2 <span class="op">=</span> [<span class="fl">113</span> <span class="fl">32</span>; <span class="fl">115</span> <span class="fl">35</span>]</span>
-<span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a><span class="fu">earth_dist</span>(p1, p2)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="fliplr" class="level2">
-<h2 class="anchored" data-anchor-id="fliplr"><code>fliplr</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`earth_dist`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
+<pre><code class="language-julia">earth_dist(x1::Matrix, x2::Matrix; R=6378.388)
+earth_dist(p1::Tuple{FT,FT}, x2::AbstractMatrix; R=6378.388) where {FT}</code></pre>
+<pre><code class="language-julia">p1 = [110 30; 111 31]
+p2 = [113 32; 115 35]
+earth_dist(p1, p2)</code></pre>
+
+
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`fliplr`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
 <p>No documentation found for public binding <code>SpatialRasterLite.fliplr</code>.</p>
 <p><code>SpatialRasterLite.fliplr</code> is a <code>Function</code>.</p>
 <pre><code># 2 methods for generic function "fliplr" from SpatialRasterLite:
@@ -1329,19 +1104,16 @@ ny       :: Int64</code></pre>
      @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/Ops.jl:13
  [2] fliplr(x::AbstractArray{T, 3}) where T&lt;:Real
      @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/Ops.jl:14</code></pre>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="flipud" class="level2">
-<h2 class="anchored" data-anchor-id="flipud"><code>flipud</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`flipud`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
 <p>No documentation found for public binding <code>SpatialRasterLite.flipud</code>.</p>
 <p><code>SpatialRasterLite.flipud</code> is a <code>Function</code>.</p>
 <pre><code># 2 methods for generic function "flipud" from SpatialRasterLite:
@@ -1349,197 +1121,159 @@ ny       :: Int64</code></pre>
      @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/Ops.jl:11
  [2] flipud(x::AbstractArray{T, 3}) where T&lt;:Real
      @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/Ops.jl:12</code></pre>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="gdal_info" class="level2">
-<h2 class="anchored" data-anchor-id="gdal_info"><code>gdal_info</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`gdal_info`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
 <p>No documentation found for public binding <code>SpatialRasterLite.gdal_info</code>.</p>
 <p><code>SpatialRasterLite.gdal_info</code> is a <code>Function</code>.</p>
 <pre><code># 0 methods for generic function "gdal_info" from SpatialRasterLite</code></pre>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="gdal_nodata" class="level2">
-<h2 class="anchored" data-anchor-id="gdal_nodata"><code>gdal_nodata</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`gdal_nodata`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
 <p>No documentation found for public binding <code>SpatialRasterLite.gdal_nodata</code>.</p>
 <p><code>SpatialRasterLite.gdal_nodata</code> is a <code>Function</code>.</p>
 <pre><code># 0 methods for generic function "gdal_nodata" from SpatialRasterLite</code></pre>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="gdal_polygonize" class="level2">
-<h2 class="anchored" data-anchor-id="gdal_polygonize"><code>gdal_polygonize</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`gdal_polygonize`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
 <p>No documentation found for public binding <code>SpatialRasterLite.gdal_polygonize</code>.</p>
 <p><code>SpatialRasterLite.gdal_polygonize</code> is a <code>Function</code>.</p>
 <pre><code># 0 methods for generic function "gdal_polygonize" from SpatialRasterLite</code></pre>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="gdalinfo" class="level2">
-<h2 class="anchored" data-anchor-id="gdalinfo"><code>gdalinfo</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`gdalinfo`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
 <p>No documentation found for public binding <code>SpatialRasterLite.gdalinfo</code>.</p>
 <p><code>SpatialRasterLite.gdalinfo</code> is a <code>Function</code>.</p>
 <pre><code># 0 methods for generic function "gdalinfo" from SpatialRasterLite</code></pre>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="getgeotransform" class="level2">
-<h2 class="anchored" data-anchor-id="getgeotransform"><code>getgeotransform</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`getgeotransform`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
 <p>No documentation found for public binding <code>SpatialRasterLite.getgeotransform</code>.</p>
 <p><code>SpatialRasterLite.getgeotransform</code> is a <code>Function</code>.</p>
 <pre><code># 1 method for generic function "getgeotransform" from SpatialRasterLite:
- [1] getgeotransform(ra::AbstractSpatRaster)
+ [1] getgeotransform(ra::SpatialRasterLite.AbstractSpatRaster)
      @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/Ops.jl:2</code></pre>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="guanshan_dem" class="level2">
-<h2 class="anchored" data-anchor-id="guanshan_dem"><code>guanshan_dem</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`guanshan_dem`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
 <p>No documentation found for public binding <code>SpatialRasterLite.guanshan_dem</code>.</p>
 <p><code>SpatialRasterLite.guanshan_dem</code> is of type <code>String</code>.</p>
-<section id="summary-4" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="summary-4">Summary</h3>
+<h3 class="anchored">Summary {.unnumbered}</h3>
 <pre><code>mutable struct String</code></pre>
-</section>
-<section id="supertype-hierarchy-2" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="supertype-hierarchy-2">Supertype Hierarchy</h3>
+<h3 class="anchored">Supertype Hierarchy {.unnumbered}</h3>
 <pre><code>String &lt;: AbstractString &lt;: Any</code></pre>
-</section>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="guanshan_flowdir_cpp" class="level2">
-<h2 class="anchored" data-anchor-id="guanshan_flowdir_cpp"><code>guanshan_flowdir_cpp</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`guanshan_flowdir_cpp`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
 <p>No documentation found for public binding <code>SpatialRasterLite.guanshan_flowdir_cpp</code>.</p>
 <p><code>SpatialRasterLite.guanshan_flowdir_cpp</code> is of type <code>String</code>.</p>
-<section id="summary-5" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="summary-5">Summary</h3>
+<h3 class="anchored">Summary {.unnumbered}</h3>
 <pre><code>mutable struct String</code></pre>
-</section>
-<section id="supertype-hierarchy-3" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="supertype-hierarchy-3">Supertype Hierarchy</h3>
+<h3 class="anchored">Supertype Hierarchy {.unnumbered}</h3>
 <pre><code>String &lt;: AbstractString &lt;: Any</code></pre>
-</section>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="guanshan_flowdir_gis" class="level2">
-<h2 class="anchored" data-anchor-id="guanshan_flowdir_gis"><code>guanshan_flowdir_gis</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`guanshan_flowdir_gis`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
 <p>No documentation found for public binding <code>SpatialRasterLite.guanshan_flowdir_gis</code>.</p>
 <p><code>SpatialRasterLite.guanshan_flowdir_gis</code> is of type <code>String</code>.</p>
-<section id="summary-6" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="summary-6">Summary</h3>
+<h3 class="anchored">Summary {.unnumbered}</h3>
 <pre><code>mutable struct String</code></pre>
-</section>
-<section id="supertype-hierarchy-4" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="supertype-hierarchy-4">Supertype Hierarchy</h3>
+<h3 class="anchored">Supertype Hierarchy {.unnumbered}</h3>
 <pre><code>String &lt;: AbstractString &lt;: Any</code></pre>
-</section>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="in_bbox" class="level2">
-<h2 class="anchored" data-anchor-id="in_bbox"><code>in_bbox</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb59"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="fu">in_bbox</span>(b<span class="op">::</span><span class="dt">bbox</span>, (lon, lat))  </span>
-<span id="cb59-2"><a href="#cb59-2" aria-hidden="true" tabindex="-1"></a><span class="fu">in_bbox</span>(bs<span class="op">::</span><span class="dt">Vector{bbox}</span>, (lon, lat))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="intersect" class="level2">
-<h2 class="anchored" data-anchor-id="intersect"><code>intersect</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb60"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="fu">intersect</span>(s, itrs<span class="op">...</span>)</span>
-<span id="cb60-2"><a href="#cb60-2" aria-hidden="true" tabindex="-1"></a><span class="fu">∩</span>(s, itrs<span class="op">...</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`in_bbox`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
+<pre><code class="language-julia">in_bbox(b::bbox, (lon, lat))  
+in_bbox(bs::Vector{bbox}, (lon, lat))</code></pre>
+
+
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`intersect`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
+<pre><code class="language-julia">intersect(s, itrs...)
+∩(s, itrs...)</code></pre>
 <p>Construct the set containing those elements which appear in all of the arguments.</p>
 <p>The first argument controls what kind of container is returned. If this is an array, it maintains the order in which elements first appear.</p>
 <p>Unicode <code>∩</code> can be typed by writing <code>\cap</code> then pressing tab in the Julia REPL, and in many editors. This is an infix operator, allowing <code>s ∩ itr</code>.</p>
 <p>See also <a href="#setdiff"><code>setdiff</code></a>, <a href="#isdisjoint"><code>isdisjoint</code></a>, <a href="#issubset"><code>issubset</code></a>, <a href="#issetequal"><code>issetequal</code></a>.</p>
-<div class="callout-compat" title="Julia 1.8">
+<p>:::{.callout-compat title="Julia 1.8"}</p>
+
 <p>As of Julia 1.8 intersect returns a result with the eltype of the type-promoted eltypes of the two inputs</p>
-</div>
-<section id="examples-1" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="examples-1">Examples</h3>
-<pre class="jldoctest"><code>julia&gt; intersect([1, 2, 3], [3, 4, 5])
+<p>:::</p>
+
+
+<h3 class="anchored">Examples {.unnumbered}</h3>
+<pre><code class="language-jldoctest">julia&gt; intersect([1, 2, 3], [3, 4, 5])
 1-element Vector{Int64}:
  3
 
@@ -1558,24 +1292,18 @@ julia&gt; (0, 0.0) ∩ (-0.0, 0)
 julia&gt; intersect(Set([1, 2]), BitSet([2, 3]), 1.0:10.0)
 Set{Float64} with 1 element:
   2.0</code></pre>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb62"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="fu">intersect</span>(h1<span class="op">::</span><span class="dt">Rect</span>, h2<span class="op">::</span><span class="dt">Rect</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Perform a intersection between two Rects.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb63"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a><span class="bu">Base</span>.<span class="fu">intersect</span>(ss<span class="op">::</span><span class="dt">SortedSet</span>, others<span class="op">...</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Intersect SortedSets with other SortedSets or other iterables and return the intersection as a new SortedSet. Time: O(<em>cn</em>), where <em>n</em> is the total number of items in all the arguments if all the arguments are SortedSets of the same type and same order object. Otherwise, the time is O(<em>cn</em> log <em>n</em>)</p>
-</section>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="isscalar" class="level2">
-<h2 class="anchored" data-anchor-id="isscalar"><code>isscalar</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
+
+
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`isscalar`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
 <p>No documentation found for public binding <code>SpatialRasterLite.isscalar</code>.</p>
 <p><code>SpatialRasterLite.isscalar</code> is a <code>Function</code>.</p>
 <pre><code># 2 methods for generic function "isscalar" from SpatialRasterLite:
@@ -1583,91 +1311,71 @@ Set{Float64} with 1 element:
      @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/tools_Ipaper.jl:4
  [2] isscalar(x)
      @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/tools_Ipaper.jl:3</code></pre>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="line_end" class="level2">
-<h2 class="anchored" data-anchor-id="line_end"><code>line_end</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`line_end`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
 <p>No documentation found for public binding <code>SpatialRasterLite.line_end</code>.</p>
 <p><code>SpatialRasterLite.line_end</code> is a <code>Function</code>.</p>
 <pre><code># 1 method for generic function "line_end" from SpatialRasterLite:
- [1] line_end(line::dLine)
+ [1] line_end(line::SpatialRasterLite.dLine)
      @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/datatype.jl:69</code></pre>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="line_start" class="level2">
-<h2 class="anchored" data-anchor-id="line_start"><code>line_start</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`line_start`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
 <p>No documentation found for public binding <code>SpatialRasterLite.line_start</code>.</p>
 <p><code>SpatialRasterLite.line_start</code> is a <code>Function</code>.</p>
 <pre><code># 1 method for generic function "line_start" from SpatialRasterLite:
- [1] line_start(line::dLine)
+ [1] line_start(line::SpatialRasterLite.dLine)
      @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/datatype.jl:67</code></pre>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="make_rast" class="level2">
-<h2 class="anchored" data-anchor-id="make_rast"><code>make_rast</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`make_rast`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
 <p>No documentation found for public binding <code>SpatialRasterLite.make_rast</code>.</p>
 <p><code>SpatialRasterLite.make_rast</code> is a <code>Function</code>.</p>
 <pre><code># 1 method for generic function "make_rast" from SpatialRasterLite:
  [1] make_rast(; b, cellsize, FT)
      @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/SpatRaster.jl:72</code></pre>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="median" class="level2">
-<h2 class="anchored" data-anchor-id="median"><code>median</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb68"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a><span class="fu">median</span>(itr)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`median`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
+<pre><code class="language-julia">median(itr)</code></pre>
 <p>Compute the median of all elements in a collection. For an even number of elements no exact median element exists, so the result is equivalent to calculating mean of two median elements.</p>
-<div class="callout callout-style-default callout-note callout-titled" title="Note">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<p>:::{.callout-note title="Note"}</p>
+
 <p>If <code>itr</code> contains <code>NaN</code> or <a href="#missing"><code>missing</code></a> values, the result is also <code>NaN</code> or <code>missing</code> (<code>missing</code> takes precedence if <code>itr</code> contains both). Use the <a href="#skipmissing"><code>skipmissing</code></a> function to omit <code>missing</code> entries and compute the median of non-missing values.</p>
-</div>
-</div>
-<section id="examples-2" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="examples-2">Examples</h3>
-<pre class="jldoctest"><code>julia&gt; using Statistics
+<p>:::</p>
+
+
+<h3 class="anchored">Examples {.unnumbered}</h3>
+<pre><code class="language-jldoctest">julia&gt; using Statistics
 
 julia&gt; median([1, 2, 3])
 2.0
@@ -1680,194 +1388,160 @@ missing
 
 julia&gt; median(skipmissing([1, 2, missing, 4]))
 2.0</code></pre>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb70"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="fu">median</span>(A<span class="op">::</span><span class="dt">AbstractArray</span>; dims)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+
+
+<pre><code class="language-julia">median(A::AbstractArray; dims)</code></pre>
 <p>Compute the median of an array along the given dimensions.</p>
-</section>
-<section id="examples-3" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="examples-3">Examples</h3>
-<pre class="jldoctest"><code>julia&gt; using Statistics
+<h3 class="anchored">Examples {.unnumbered}</h3>
+<pre><code class="language-jldoctest">julia&gt; using Statistics
 
 julia&gt; median([1 2; 3 4], dims=1)
 1×2 Matrix{Float64}:
  2.0  3.0</code></pre>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb72"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a><span class="fu">median</span>(v<span class="op">::</span><span class="dt">AbstractVector{&lt;:Real}</span>, w<span class="op">::</span><span class="dt">AbstractWeights</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Compute the weighted median of <code>v</code> with weights <code>w</code> (of type <code>AbstractWeights</code>). See the documentation for <a href="#quantile"><code>quantile</code></a> for more details.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb73"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb73-1"><a href="#cb73-1" aria-hidden="true" tabindex="-1"></a><span class="fu">median</span>(d<span class="op">::</span><span class="dt">UnivariateDistribution</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Return the median value of distribution <code>d</code>. The median is the smallest <code>x</code> in the support of <code>d</code> for which <code>cdf(d, x) ≥ 1/2</code>. Corresponding to this definition as 1/2-quantile, a fallback is provided calling the <code>quantile</code> function.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb74"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb74-1"><a href="#cb74-1" aria-hidden="true" tabindex="-1"></a><span class="fu">median</span>(d<span class="op">::</span><span class="dt">MvLogNormal</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Return the median vector of the lognormal distribution. which is strictly smaller than the mean.</p>
-</section>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="merge_var" class="level2">
-<h2 class="anchored" data-anchor-id="merge_var"><code>merge_var</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb75"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb75-1"><a href="#cb75-1" aria-hidden="true" tabindex="-1"></a><span class="fu">merge_var</span>(fs; vars<span class="op">=</span><span class="cn">nothing</span>, var<span class="op">=</span><span class="cn">nothing</span>,</span>
-<span id="cb75-2"><a href="#cb75-2" aria-hidden="true" tabindex="-1"></a>    progress<span class="op">=</span><span class="cn">true</span>, box<span class="op">::</span><span class="dt">Union{bbox,Nothing}</span>=<span class="cn">nothing</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<section id="arguments-2" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="arguments-2">Arguments</h3>
+
+
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`merge_var`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
+<pre><code class="language-julia">merge_var(fs; vars=nothing, var=nothing,
+    progress=true, box::Union{bbox,Nothing}=nothing)</code></pre>
+<h3 class="anchored">Arguments {.unnumbered}</h3>
 <ul>
-<li><code>fs</code>: tiff file paths</li>
-<li><code>vars</code>: variables in the tiff</li>
-<li><code>var</code>: variable to merge</li>
+<li><p><code>fs</code>: tiff file paths</p>
+</li>
+<li><p><code>vars</code>: variables in the tiff</p>
+</li>
+<li><p><code>var</code>: variable to merge</p>
+</li>
 </ul>
-</section>
-<section id="examples-4" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="examples-4">Examples</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb76"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb76-1"><a href="#cb76-1" aria-hidden="true" tabindex="-1"></a>box <span class="op">=</span> <span class="fu">bbox</span>(<span class="op">-</span><span class="fl">180</span>, <span class="op">-</span><span class="fl">60</span>, <span class="fl">180</span>, <span class="fl">90</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="merge_var-1" class="level2">
-<h2 class="anchored" data-anchor-id="merge_var-1"><code>merge_var!</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
+<h3 class="anchored">Examples {.unnumbered}</h3>
+<pre><code class="language-julia">box = bbox(-180, -60, 180, 90)</code></pre>
+
+
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`merge_var!`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
 <p>No documentation found for public binding <code>SpatialRasterLite.merge_var!</code>.</p>
 <p><code>SpatialRasterLite.merge_var!</code> is a <code>Function</code>.</p>
 <pre><code># 1 method for generic function "merge_var!" from SpatialRasterLite:
  [1] merge_var!(R::AbstractArray, f; var, box, cellsize)
      @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/st_mosaic.jl:35</code></pre>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="meshgrid" class="level2">
-<h2 class="anchored" data-anchor-id="meshgrid"><code>meshgrid</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`meshgrid`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
 <p>No documentation found for public binding <code>SpatialRasterLite.meshgrid</code>.</p>
 <p><code>SpatialRasterLite.meshgrid</code> is a <code>Function</code>.</p>
 <pre><code># 1 method for generic function "meshgrid" from SpatialRasterLite:
  [1] meshgrid(x, y)
      @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/tools_Ipaper.jl:7</code></pre>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="nband" class="level2">
-<h2 class="anchored" data-anchor-id="nband"><code>nband</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`nband`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
 <p>No documentation found for public binding <code>SpatialRasterLite.nband</code>.</p>
 <p><code>SpatialRasterLite.nband</code> is a <code>Function</code>.</p>
 <pre><code># 1 method for generic function "nband" from SpatialRasterLite:
- [1] nband(ra::SpatRaster{T, N}) where {T, N}
+ [1] nband(ra::SpatialRasterLite.SpatRaster{T, N}) where {T, N}
      @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/SpatRaster.jl:21</code></pre>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="nlayer" class="level2">
-<h2 class="anchored" data-anchor-id="nlayer"><code>nlayer</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`nlayer`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
 <p>No documentation found for public binding <code>SpatialRasterLite.nlayer</code>.</p>
 <p><code>SpatialRasterLite.nlayer</code> is a <code>Function</code>.</p>
 <pre><code># 0 methods for generic function "nlayer" from SpatialRasterLite</code></pre>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="nlyr" class="level2">
-<h2 class="anchored" data-anchor-id="nlyr"><code>nlyr</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`nlyr`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
 <p>No documentation found for public binding <code>SpatialRasterLite.nband</code>.</p>
 <p><code>SpatialRasterLite.nband</code> is a <code>Function</code>.</p>
 <pre><code># 1 method for generic function "nband" from SpatialRasterLite:
- [1] nband(ra::SpatRaster{T, N}) where {T, N}
+ [1] nband(ra::SpatialRasterLite.SpatRaster{T, N}) where {T, N}
      @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/SpatRaster.jl:21</code></pre>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="ogr_info" class="level2">
-<h2 class="anchored" data-anchor-id="ogr_info"><code>ogr_info</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`ogr_info`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
 <p>No documentation found for public binding <code>SpatialRasterLite.ogr_info</code>.</p>
 <p><code>SpatialRasterLite.ogr_info</code> is a <code>Function</code>.</p>
 <pre><code># 0 methods for generic function "ogr_info" from SpatialRasterLite</code></pre>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="range2bbox" class="level2">
-<h2 class="anchored" data-anchor-id="range2bbox"><code>range2bbox</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`range2bbox`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
 <p>No documentation found for public binding <code>SpatialRasterLite.range2bbox</code>.</p>
 <p><code>SpatialRasterLite.range2bbox</code> is a <code>Function</code>.</p>
 <pre><code># 1 method for generic function "range2bbox" from SpatialRasterLite:
  [1] range2bbox(r::AbstractVector)
      @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/bbox.jl:67</code></pre>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="rast" class="level2">
-<h2 class="anchored" data-anchor-id="rast"><code>rast</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`rast`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
 <p>No documentation found for public binding <code>SpatialRasterLite.rast</code>.</p>
-<section id="summary-7" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="summary-7">Summary</h3>
-<pre><code>mutable struct SpatRaster{T, N}</code></pre>
-</section>
-<section id="fields-3" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="fields-3">Fields</h3>
+<h3 class="anchored">Summary {.unnumbered}</h3>
+<pre><code>mutable struct SpatialRasterLite.SpatRaster{T, N}</code></pre>
+<h3 class="anchored">Fields {.unnumbered}</h3>
 <pre><code>A        :: AbstractArray{T, N}
-b        :: bbox
+b        :: SpatialRasterLite.bbox
 cellsize :: Tuple{Real, Real}
 lon      :: AbstractVector{&lt;:Real}
 lat      :: AbstractVector{&lt;:Real}
@@ -1875,304 +1549,257 @@ time     :: Union{Nothing, AbstractVector}
 bands    :: Union{Nothing, AbstractVector{String}}
 name     :: String
 nodata   :: Union{Nothing, AbstractArray{T, 1}}</code></pre>
-</section>
-<section id="supertype-hierarchy-5" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="supertype-hierarchy-5">Supertype Hierarchy</h3>
-<pre><code>SpatRaster{T, N} &lt;: AbstractSpatRaster{T, N} &lt;: Any</code></pre>
-</section>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="read_gdal" class="level2">
-<h2 class="anchored" data-anchor-id="read_gdal"><code>read_gdal</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
+<h3 class="anchored">Supertype Hierarchy {.unnumbered}</h3>
+<pre><code>SpatialRasterLite.SpatRaster{T, N} &lt;: SpatialRasterLite.AbstractSpatRaster{T, N} &lt;: Any</code></pre>
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`read_gdal`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
 <p>No documentation found for public binding <code>SpatialRasterLite.read_gdal</code>.</p>
 <p><code>SpatialRasterLite.read_gdal</code> is a <code>Function</code>.</p>
 <pre><code># 3 methods for generic function "read_gdal" from SpatialRasterLite:
  [1] read_gdal(files::Vector{&lt;:AbstractString}, options...)
      @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/IO.jl:13
- [2] read_gdal(file::AbstractString, indices, b::bbox, options...)
+ [2] read_gdal(file::AbstractString, indices, b::SpatialRasterLite.bbox, options...)
      @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/IO.jl:22
- [3] read_gdal(file::AbstractString, b::bbox, options...)
+ [3] read_gdal(file::AbstractString, b::SpatialRasterLite.bbox, options...)
      @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/IO.jl:35</code></pre>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="read_sf" class="level2">
-<h2 class="anchored" data-anchor-id="read_sf"><code>read_sf</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`read_sf`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
 <p>No documentation found for public binding <code>SpatialRasterLite.read_sf</code>.</p>
 <p><code>SpatialRasterLite.read_sf</code> is a <code>Function</code>.</p>
 <pre><code># 0 methods for generic function "read_sf" from SpatialRasterLite</code></pre>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="resample_first" class="level2">
-<h2 class="anchored" data-anchor-id="resample_first"><code>resample_first</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`resample_first`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
 <p>No documentation found for public binding <code>SpatialRasterLite.resample_first</code>.</p>
 <p><code>SpatialRasterLite.resample_first</code> is a <code>Function</code>.</p>
 <pre><code># 1 method for generic function "resample_first" from SpatialRasterLite:
  [1] resample_first(r::AbstractArray; fact, deepcopy)
      @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/st_resample.jl:6</code></pre>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="rm_shp" class="level2">
-<h2 class="anchored" data-anchor-id="rm_shp"><code>rm_shp</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`rm_shp`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
 <p>No documentation found for public binding <code>SpatialRasterLite.rm_shp</code>.</p>
 <p><code>SpatialRasterLite.rm_shp</code> is a <code>Function</code>.</p>
 <pre><code># 1 method for generic function "rm_shp" from SpatialRasterLite:
  [1] rm_shp(f)
      @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/SpatialRasterLite.jl:103</code></pre>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="set_bandnames" class="level2">
-<h2 class="anchored" data-anchor-id="set_bandnames"><code>set_bandnames</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`set_bandnames`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
 <p>No documentation found for public binding <code>SpatialRasterLite.set_bandnames</code>.</p>
 <p><code>SpatialRasterLite.set_bandnames</code> is a <code>Function</code>.</p>
 <pre><code># 0 methods for generic function "set_bandnames" from SpatialRasterLite</code></pre>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="st_bbox" class="level2">
-<h2 class="anchored" data-anchor-id="st_bbox"><code>st_bbox</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`st_bbox`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
 <p>No documentation found for public binding <code>SpatialRasterLite.st_bbox</code>.</p>
 <p><code>SpatialRasterLite.st_bbox</code> is a <code>Function</code>.</p>
 <pre><code># 6 methods for generic function "st_bbox" from SpatialRasterLite:
  [1] st_bbox(f::String)
      @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/st_bbox.jl:15
- [2] st_bbox(bs::Vector{bbox})
+ [2] st_bbox(bs::Vector{SpatialRasterLite.bbox})
      @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/st_bbox.jl:22
  [3] st_bbox(lon, lat)
      @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/st_bbox.jl:8
- [4] st_bbox(line::dLine)
+ [4] st_bbox(line::SpatialRasterLite.dLine)
      @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/datatype.jl:77
- [5] st_bbox(r::AbstractSpatRaster)
+ [5] st_bbox(r::SpatialRasterLite.AbstractSpatRaster)
      @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/st_bbox.jl:2
  [6] st_bbox(v::Vector{&lt;:Real})
      @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/st_bbox.jl:4</code></pre>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="st_cellsize" class="level2">
-<h2 class="anchored" data-anchor-id="st_cellsize"><code>st_cellsize</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`st_cellsize`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
 <p>No documentation found for public binding <code>SpatialRasterLite.st_cellsize</code>.</p>
 <p><code>SpatialRasterLite.st_cellsize</code> is a <code>Function</code>.</p>
 <pre><code># 3 methods for generic function "st_cellsize" from SpatialRasterLite:
- [1] st_cellsize(r::AbstractSpatRaster)
+ [1] st_cellsize(r::SpatialRasterLite.AbstractSpatRaster)
      @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/st_dims.jl:45
  [2] st_cellsize(lon::AbstractVector, lat::AbstractVector)
      @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/st_dims.jl:47
  [3] st_cellsize(f::AbstractString)
      @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/st_dims.jl:51</code></pre>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="st_coords" class="level2">
-<h2 class="anchored" data-anchor-id="st_coords"><code>st_coords</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`st_coords`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
 <p>No documentation found for public binding <code>SpatialRasterLite.st_coords</code>.</p>
 <p><code>SpatialRasterLite.st_coords</code> is a <code>Function</code>.</p>
 <pre><code># 1 method for generic function "st_coords" from SpatialRasterLite:
- [1] st_coords(ra::SpatRaster)
+ [1] st_coords(ra::SpatialRasterLite.SpatRaster)
      @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/SpatialRasterLite.jl:83</code></pre>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="st_crop" class="level2">
-<h2 class="anchored" data-anchor-id="st_crop"><code>st_crop</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`st_crop`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
 <p>No documentation found for public binding <code>SpatialRasterLite.st_crop</code>.</p>
 <p><code>SpatialRasterLite.st_crop</code> is a <code>Function</code>.</p>
 <pre><code># 2 methods for generic function "st_crop" from SpatialRasterLite:
- [1] st_crop(f::String, b::bbox)
+ [1] st_crop(f::String, b::SpatialRasterLite.bbox)
      @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/st_crop.jl:3
- [2] st_crop(ra::SpatRaster, b::bbox)
+ [2] st_crop(ra::SpatialRasterLite.SpatRaster, b::SpatialRasterLite.bbox)
      @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/st_crop.jl:5</code></pre>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="st_dims" class="level2">
-<h2 class="anchored" data-anchor-id="st_dims"><code>st_dims</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`st_dims`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
 <p>No documentation found for public binding <code>SpatialRasterLite.st_dims</code>.</p>
 <p><code>SpatialRasterLite.st_dims</code> is a <code>Function</code>.</p>
 <pre><code># 4 methods for generic function "st_dims" from SpatialRasterLite:
- [1] st_dims(rastersize::RasterSize)
+ [1] st_dims(rastersize::SpatialRasterLite.RasterSize)
      @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/SpatRaster.jl:202
  [2] st_dims(f::String)
      @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/st_dims.jl:26
  [3] st_dims(x::SpatialRasterLite.FileGDAL)
      @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/st_dims.jl:32
- [4] st_dims(r::AbstractSpatRaster)
+ [4] st_dims(r::SpatialRasterLite.AbstractSpatRaster)
      @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/st_dims.jl:24</code></pre>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="st_extract" class="level2">
-<h2 class="anchored" data-anchor-id="st_extract"><code>st_extract</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`st_extract`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
 <p>No documentation found for public binding <code>SpatialRasterLite.st_extract</code>.</p>
 <p><code>SpatialRasterLite.st_extract</code> is a <code>Function</code>.</p>
 <pre><code># 2 methods for generic function "st_extract" from SpatialRasterLite:
- [1] st_extract(ra::AbstractSpatRaster{FT}, point::P) where {FT, T, P&lt;:Union{Tuple{T, T}, Point{T}}}
+ [1] st_extract(ra::SpatialRasterLite.AbstractSpatRaster{FT}, point::P) where {FT, T, P&lt;:Union{Tuple{T, T}, SpatialRasterLite.Point{T}}}
      @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/st_extract.jl:19
- [2] st_extract(ra::AbstractSpatRaster, points::Vector{P}; combine) where {T&lt;:Real, P&lt;:Union{Tuple{T, T}, Point{T}}}
+ [2] st_extract(ra::SpatialRasterLite.AbstractSpatRaster, points::Vector{P}; combine) where {T&lt;:Real, P&lt;:Union{Tuple{T, T}, SpatialRasterLite.Point{T}}}
      @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/st_extract.jl:28</code></pre>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="st_location-1" class="level2">
-<h2 class="anchored" data-anchor-id="st_location-1"><code>st_location</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`st_location`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
 <p>No documentation found for public binding <code>SpatialRasterLite.st_location</code>.</p>
 <p><code>SpatialRasterLite.st_location</code> is a <code>Function</code>.</p>
 <pre><code># 2 methods for generic function "st_location" from SpatialRasterLite:
- [1] st_location(rastersize::RasterSize, points::Vector{P}; rm_empty) where {T&lt;:Real, P&lt;:Union{Tuple{T, T}, Point{T}}}
+ [1] st_location(rastersize::SpatialRasterLite.RasterSize, points::Vector{P}; rm_empty) where {T&lt;:Real, P&lt;:Union{Tuple{T, T}, SpatialRasterLite.Point{T}}}
      @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/st_location.jl:33
- [2] st_location(ra::AbstractSpatRaster, args...; kw...)
+ [2] st_location(ra::SpatialRasterLite.AbstractSpatRaster, args...; kw...)
      @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/st_location.jl:41</code></pre>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="st_location_exact" class="level2">
-<h2 class="anchored" data-anchor-id="st_location_exact"><code>st_location_exact</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`st_location_exact`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
 <p>No documentation found for public binding <code>SpatialRasterLite.st_location_exact</code>.</p>
 <p><code>SpatialRasterLite.st_location_exact</code> is a <code>Function</code>.</p>
 <pre><code># 1 method for generic function "st_location_exact" from SpatialRasterLite:
  [1] st_location_exact(lon::AbstractVector, lat::AbstractVector, points::Array{Tuple{T, T}, 1}; rm_empty, cellsize, tol) where T&lt;:Real
      @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/st_location.jl:48</code></pre>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="st_mosaic" class="level2">
-<h2 class="anchored" data-anchor-id="st_mosaic"><code>st_mosaic</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb100"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb100-1"><a href="#cb100-1" aria-hidden="true" tabindex="-1"></a><span class="fu">st_mosaic</span>(rs<span class="op">::</span><span class="dt">Vector{SpatRaster{T,N}}</span>; kw<span class="op">...</span>) <span class="kw">where</span> {T,N}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<section id="arguments-3" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="arguments-3">Arguments</h3>
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`st_mosaic`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
+<pre><code class="language-julia">st_mosaic(rs::Vector{SpatRaster{T,N}}; kw...) where {T,N}</code></pre>
+<h3 class="anchored">Arguments {.unnumbered}</h3>
 <ul>
-<li><code>kw</code>: others to <code>SpatRaster</code></li>
+<li><p><code>kw</code>: others to <code>SpatRaster</code></p>
+</li>
 </ul>
-</section>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="st_points" class="level2">
-<h2 class="anchored" data-anchor-id="st_points"><code>st_points</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
+
+
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`st_points`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
 <p>No documentation found for public binding <code>SpatialRasterLite.st_points</code>.</p>
 <p><code>SpatialRasterLite.st_points</code> is a <code>Function</code>.</p>
 <pre><code># 2 methods for generic function "st_points" from SpatialRasterLite:
@@ -2180,115 +1807,102 @@ nodata   :: Union{Nothing, AbstractArray{T, 1}}</code></pre>
      @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/SpatialRasterLite.jl:89
  [2] st_points(X::AbstractMatrix{T}) where T
      @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/SpatialRasterLite.jl:93</code></pre>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="st_read" class="level2">
-<h2 class="anchored" data-anchor-id="st_read"><code>st_read</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`st_read`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
 <p>No documentation found for public binding <code>SpatialRasterLite.read_gdal</code>.</p>
 <p><code>SpatialRasterLite.read_gdal</code> is a <code>Function</code>.</p>
 <pre><code># 3 methods for generic function "read_gdal" from SpatialRasterLite:
  [1] read_gdal(files::Vector{&lt;:AbstractString}, options...)
      @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/IO.jl:13
- [2] read_gdal(file::AbstractString, indices, b::bbox, options...)
+ [2] read_gdal(file::AbstractString, indices, b::SpatialRasterLite.bbox, options...)
      @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/IO.jl:22
- [3] read_gdal(file::AbstractString, b::bbox, options...)
+ [3] read_gdal(file::AbstractString, b::SpatialRasterLite.bbox, options...)
      @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/IO.jl:35</code></pre>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="st_write" class="level2">
-<h2 class="anchored" data-anchor-id="st_write"><code>st_write</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`st_write`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
 <p>No documentation found for public binding <code>SpatialRasterLite.write_gdal</code>.</p>
 <p><code>SpatialRasterLite.write_gdal</code> is a <code>Function</code>.</p>
 <pre><code># 0 methods for generic function "write_gdal" from SpatialRasterLite</code></pre>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="sun_shade" class="level2">
-<h2 class="anchored" data-anchor-id="sun_shade"><code>sun_shade</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`sun_shade`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
 <p>No documentation found for public binding <code>SpatialRasterLite.sun_shade</code>.</p>
 <p><code>SpatialRasterLite.sun_shade</code> is a <code>Function</code>.</p>
 <pre><code># 1 method for generic function "sun_shade" from SpatialRasterLite:
- [1] sun_shade(α::SpatRaster, time::Dates.DateTime; δψ)
+ [1] sun_shade(α::SpatialRasterLite.SpatRaster, time::Dates.DateTime; δψ)
      @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/terrain/sun_shade.jl:3</code></pre>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="time2local" class="level2">
-<h2 class="anchored" data-anchor-id="time2local"><code>time2local</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`time2local`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
 <p>北京时间修正到localtime</p>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="write_gdal" class="level2">
-<h2 class="anchored" data-anchor-id="write_gdal"><code>write_gdal</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
+
+
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`write_gdal`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
 <p>No documentation found for public binding <code>SpatialRasterLite.write_gdal</code>.</p>
 <p><code>SpatialRasterLite.write_gdal</code> is a <code>Function</code>.</p>
 <pre><code># 0 methods for generic function "write_gdal" from SpatialRasterLite</code></pre>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="write_sf" class="level2">
-<h2 class="anchored" data-anchor-id="write_sf"><code>write_sf</code></h2>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
+
+<p>:::</p>
+
+
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+<h2 class="anchored">`write_sf`</h2>
+<p>:::{.callout appearance="minimal"}</p>
+
 <p>No documentation found for public binding <code>SpatialRasterLite.write_sf</code>.</p>
 <p><code>SpatialRasterLite.write_sf</code> is a <code>Function</code>.</p>
 <pre><code># 0 methods for generic function "write_sf" from SpatialRasterLite</code></pre>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
+
+<p>:::</p>
 
 
-</section>
+<p>{{&lt; pagebreak &gt;}}</p>
+
+
+</div>
+
+
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -2718,4 +2332,4 @@ nodata   :: Union{Nothing, AbstractArray{T, 1}}</code></pre>
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/jl-pkgs/SpatialRasterLite.jl/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/jl-pkgs/SpatialRasterLite.jl/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
