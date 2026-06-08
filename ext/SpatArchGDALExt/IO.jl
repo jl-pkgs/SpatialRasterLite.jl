@@ -1,22 +1,24 @@
 """
-    read_gdal(file::AbstractString, indices=1, options...)
+    read_gdal(file::AbstractString, indices=1:nband(file), options...; raw=false)
 
-Read a raster with ArchGDAL, decoding each band by its metadata:
-`out = scale * raw + offset`, with pixels equal to the band's nodata value set to
-`NaN`. `indices` selects the band(s) (an `Integer` gives a 2D array, a
-range/vector a 3D array); `options...` are forwarded to `ArchGDAL.read` as a
-`rows, cols` window. Both match the dimensionality of the raw reader.
+Read a raster with ArchGDAL. `indices` selects the band(s) (an `Integer` gives a
+2D array, a range/vector a 3D array); `options...` are forwarded to
+`ArchGDAL.read` as a `rows, cols` window.
 
-The element type is **not** forced to `Float32`: a band without scale/offset
-metadata keeps its raw type (e.g. a `UInt8` mask stays `UInt8`, an integer
-nodata keeps its sentinel since it cannot hold `NaN`), and a scaled band keeps
-its own float precision (`Float32` stays `Float32`, integers promote to their
-natural float type). Works for any GDAL format exposing scale/offset/nodata,
-e.g. HDF4, HDF5, netCDF and GeoTIFF.
+- `raw=true`: return the values exactly as stored, identical to `ArchGDAL.read`.
+- `raw=false` (default): decode each band by its metadata, `out = scale*raw + offset`,
+  with pixels equal to the band's nodata value set to `NaN`. A band without
+  scale/offset metadata keeps its raw element type (e.g. a `UInt8` mask stays
+  `UInt8`, an integer nodata keeps its sentinel since it cannot hold `NaN`); a
+  scaled band is returned as `Float32`.
+
+Works for any GDAL format exposing scale/offset/nodata, e.g. HDF4, HDF5, netCDF
+and GeoTIFF.
 """
-function read_gdal(file::AbstractString, indices=1:nband(file), options...)
+function read_gdal(file::AbstractString, indices=1:nband(file), options...; raw::Bool=false)
   ArchGDAL.read(file) do ds
     A = ArchGDAL.read(ds, indices, options...)
+    raw && return A
     if indices isa Integer
       decode_band(A, ArchGDAL.getband(ds, indices))           # 2D, single band
     else
@@ -29,8 +31,8 @@ function read_gdal(file::AbstractString, indices=1:nband(file), options...)
 end
 
 # Decode one 2D band: `out = scale * raw + offset`, with nodata pixels set to NaN.
-# The raw element type is kept when no scaling is needed; scaling promotes
-# integers to their natural float type and keeps existing float precision.
+# The raw element type is kept when no scaling is needed; a scaled band is
+# returned as Float32.
 function decode_band(raw::AbstractArray, band)
   scale = ArchGDAL.getscale(band)
   offset = ArchGDAL.getoffset(band)
@@ -39,7 +41,7 @@ function decode_band(raw::AbstractArray, band)
   out = raw
   # scale and offset
   if (scale !== nothing && scale != 1) || (offset !== nothing && offset != 0)
-    T = eltype(raw) <: AbstractFloat ? eltype(raw) : float(eltype(raw))
+    T = eltype(raw) <: AbstractFloat ? eltype(raw) : Float32
     s, o = T(something(scale, 1)), T(something(offset, 0))
     out = @. T(raw) * s + o
   end
