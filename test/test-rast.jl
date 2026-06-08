@@ -1,4 +1,4 @@
-# using Test, Ipaper, Ipaper.sf, ArchGDAL
+using Test, SpatialRasterLite, ArchGDAL
 
 @testset "st_crop" begin
   b = bbox(-180.0, -60.0, 180.0, 90.0)
