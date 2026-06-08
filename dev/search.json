@@ -114,7 +114,7 @@
     "href": "3-IO.html#读数据",
     "title": "3. IO",
     "section": "读数据",
-    "text": "读数据\nrast(\"test.tif\")\n\nSpatRaster{Float64}: Raster\n  A        : Matrix{Float64} | (180, 90) | 0.12 Mb\n  b        : SpatialRasterLite.bbox(-180.0, -90.0, 180.0, 90.0)\n  cellsize : (2.0, -2.0)\n  lon, lat : -179.0:2.0:179.0, 89.0:-2.0:-89.0\n  time     : nothing\n  bands    : [\"\", \"\", \"\", \"\", \"\", \"\", \"\", \"\", \"\", \"\"]\n  nodata   : [-1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0]",
+    "text": "读数据\nrast(\"test.tif\")\n\nSpatRaster{Float64}: Raster\n  A        : Array{Float64, 3} | (180, 90, 10) | 1.24 Mb\n  b        : SpatialRasterLite.bbox(-180.0, -90.0, 180.0, 90.0)\n  cellsize : (2.0, -2.0)\n  lon, lat : -179.0:2.0:179.0, 89.0:-2.0:-89.0\n  time     : nothing\n  bands    : [\"\", \"\", \"\", \"\", \"\", \"\", \"\", \"\", \"\", \"\"]\n  nodata   : [-1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0]",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>3. IO</span>"
     ]
@@ -154,7 +154,7 @@
     "href": "6-Visualization.html",
     "title": "6. Visualization",
     "section": "",
-    "text": "using SpatialRasterLite\nusing MakieLayers, CairoMakie\nimport MakieLayers: imagesc, imagesc!\n\u001b[32m\u001b[1mPrecompiling\u001b[22m\u001b[39m packages… 1927.8 ms\u001b[32m ✓ \u001b[39mQuartoNotebookWorkerLaTeXStringsExt\u001b[90m (serial)\u001b[39m 1 dependency successfully precompiled in 2 seconds \u001b[32m\u001b[1mPrecompiling\u001b[22m\u001b[39m packages… 6549.8 ms\u001b[32m ✓ \u001b[39mQuartoNotebookWorkerMakieExt\u001b[90m (serial)\u001b[39m 1 dependency successfully precompiled in 7 seconds \u001b[32m\u001b[1mPrecompiling\u001b[22m\u001b[39m packages… 5552.3 ms\u001b[32m ✓ \u001b[39mQuartoNotebookWorkerCairoMakieExt\u001b[90m (serial)\u001b[39m 1 dependency successfully precompiled in 6 seconds\nimagesc(rand(10, 10))",
+    "text": "using SpatialRasterLite\nusing MakieLayers, CairoMakie\nimport MakieLayers: imagesc, imagesc!\n\u001b[32m\u001b[1mPrecompiling\u001b[22m\u001b[39m packages… 2205.0 ms\u001b[32m ✓ \u001b[39mQuartoNotebookWorkerLaTeXStringsExt\u001b[90m (serial)\u001b[39m 1 dependency successfully precompiled in 2 seconds \u001b[32m\u001b[1mPrecompiling\u001b[22m\u001b[39m packages… 7979.4 ms\u001b[32m ✓ \u001b[39mQuartoNotebookWorkerMakieExt\u001b[90m (serial)\u001b[39m 1 dependency successfully precompiled in 8 seconds \u001b[32m\u001b[1mPrecompiling\u001b[22m\u001b[39m packages… 6832.8 ms\u001b[32m ✓ \u001b[39mQuartoNotebookWorkerCairoMakieExt\u001b[90m (serial)\u001b[39m 1 dependency successfully precompiled in 7 seconds\nimagesc(rand(10, 10))",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>6. Visualization</span>"
     ]
