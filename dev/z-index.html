@@ -45,9 +45,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-3c783a26b990b0a0438cc0f6bb36fd68.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-e88e7fda9ecf262689f8c1ca6482b415.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-3c783a26b990b0a0438cc0f6bb36fd68.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-5333cbb6fb6c76c4d47cf364615734bc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-6ee78bfae3fb892e2a35c139f9a68f54.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-5333cbb6fb6c76c4d47cf364615734bc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -1009,9 +1009,9 @@ bbox2affine(size::Tuple{Integer, Integer}, b::bbox)</code></pre>
 <p><code>SpatialRasterLite.dem_angle_MaxElevation</code> is a <code>Function</code>.</p>
 <pre><code># 2 methods for generic function "dem_angle_MaxElevation" from SpatialRasterLite:
  [1] dem_angle_MaxElevation(elev::SpatialRasterLite.SpatRaster, p0::SpatialRasterLite.Point{T}; δψ, radian, rastersize) where T
-     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/terrain/dem_slope.jl:18
+     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/terrain/dem_slope.jl:105
  [2] dem_angle_MaxElevation(elev::SpatialRasterLite.SpatRaster; δψ, radian)
-     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/terrain/dem_slope.jl:37</code></pre>
+     @ ~/work/SpatialRasterLite.jl/SpatialRasterLite.jl/src/terrain/dem_slope.jl:124</code></pre>
 
 <p>:::</p>
 
@@ -1021,6 +1021,27 @@ bbox2affine(size::Tuple{Integer, Integer}, b::bbox)</code></pre>
 
 <h2 class="anchored">`dem_slope`</h2>
 <p>:::{.callout appearance="minimal"}</p>
+
+<pre><code class="language-julia">dem_slope(dem::SpatRaster; R=6378.388)</code></pre>
+<p>由 WGS84 高程栅格计算<strong>最陡下降方向</strong>的坡度与坡向 (D8)。</p>
+<p>对每个格点, 计算其指向 8 个相邻格点的下降梯度 <code>(z0 - z_i) / dist_i</code>, 取最大者:</p>
+<ul>
+<li><p><code>slope</code>: 该最陡下降方向的坡度, 单位 <strong>m/m</strong> (坡度角的正切, rise/run); 浮点, 边界格点为 <code>NaN</code>;</p>
+</li>
+<li><p><code>dir</code>:   最陡下降方向, 按 ArcGIS flow direction 编码 (E=1, SE=2, S=4, SW=8, W=16, NW=32, N=64, NE=128), 以 <code>UInt8</code> 存储; 边界、洼地/平地等无下降方向记 <code>0</code>。</p>
+</li>
+</ul>
+<p>经向、纬向及对角的地面格距由经纬度换算为实际距离 [m], 随纬度逐行变化。两个输出 <code>SpatRaster</code> 与 <code>dem</code> 几何范围相同。</p>
+<h3 class="anchored">Arguments {.unnumbered}</h3>
+<ul>
+<li><p><code>dem</code>: 高程栅格, 高程单位 m, 经纬度单位为度。</p>
+</li>
+<li><p><code>R</code>: 地球半径 [km], 用于地面距离换算。</p>
+</li>
+</ul>
+<h3 class="anchored">Return {.unnumbered}</h3>
+<p><code>(; slope, dir)</code>, 均为 <code>SpatRaster</code> (<code>slope</code> 为浮点, <code>dir</code> 为 <code>UInt8</code>)。</p>
+
 
 <p>slope in radian</p>
 
