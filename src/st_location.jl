@@ -13,21 +13,17 @@ inds, locs = st_location(r, points)
 """
 function _st_location(rastsize::RasterSize, x::T, y::T) where {T<:Real}
   (; b, cellsize, nx, ny) = rastsize
-  cellx, celly = cellsize
-  i = (x - b.xmin) / cellx
-  if celly > 0
-    j = (y - b.ymin) / celly
-  else
-    j = (b.ymax - y) / -celly
-  end
-  i2 = floor(Int, i) + 1
-  j2 = ceil(Int, j)
-  # @show x, y, i, j, i2, j2 # 存在的问题就是最后一个匹配不上
-  if (i2 < 1 || i2 > nx) || (j2 < 1 || j2 > ny)
-    return nothing ## TODO, unify return type
-  else
-    i2, j2
-  end
+  (b.xmin <= x <= b.xmax && b.ymin <= y <= b.ymax) || return nothing
+  # Match terra: internal ties go east/south; include the outer edges.
+  i = x == b.xmax ? nx : floor(Int, (x - b.xmin) * (nx / (b.xmax - b.xmin))) + 1
+  j = y == b.ymin ? ny : floor(Int, (b.ymax - y) * (ny / (b.ymax - b.ymin))) + 1
+  (1 <= i <= nx && 1 <= j <= ny) || return nothing
+  i, cellsize[2] > 0 ? ny - j + 1 : j
+end
+
+function st_location(rastersize::RasterSize, point::P) where {
+  T<:Real,P<:Union{Tuple{T,T},Point{T}}}
+  _st_location(rastersize, get_x(point), get_y(point))
 end
 
 function st_location(rastersize::RasterSize, points::Vector{P}; rm_empty::Bool=false) where {

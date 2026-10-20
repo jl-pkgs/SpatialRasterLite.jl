@@ -10,7 +10,9 @@
   f = guanshan_dem
   ra = rast(f)
   inds, vals = st_extract(ra, points)
-  @test length(vals) == 2
+  @test inds == 1:4
+  @test length(vals) == 4
+  @test isnan(vals[end])
   # r2 = st_resample(ra; fact=10)
   # @test size(r2) == (16, 12, 1)
 end
@@ -38,11 +40,11 @@ end
     (0.1, 0.9),
     (1.0, 1.0), # 处于边界上
     (9.5, 9.9),
-    (10, 10)    # 超出范围
+    (10, 10)    # 外边界，纳入栅格
   ]
   locs = st_location(ra, points)
   # @test which_notnull(locs) == 1:5
-  @test locs == [(1, 10), (1, 10), (1, 10), (2, 9), (10, 1), nothing]
+  @test locs == [(1, 10), (1, 10), (1, 10), (2, 10), (10, 1), (10, 1)]
 
   locs = st_location_exact(lon, lat, points)
   # @test which_notnull(locs) == 1:6

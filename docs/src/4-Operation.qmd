@@ -30,9 +30,12 @@ using SpatialRasterLite, ArchGDAL
   j = j = (b.ymax - y) / abs(celly)
   ```
 
-## st_extrac
+## st_extract
 
 - `st_extract(ra::AbstractSpatRaster, points::Vector{Tuple{T,T}}; combine=hcat)`
+
+与 terra 的简单提取规则一致：内部边界归东、南侧，外边界纳入栅格。
+返回的 `index` 保留全部输入点及其顺序；越界或非有限坐标对应的 `value` 为 `NaN`，不再删除点。
 
 ```julia
 points = st_points(X[:, 1], X[:, 2])
