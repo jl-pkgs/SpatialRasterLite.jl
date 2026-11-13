@@ -1,12 +1,15 @@
 export st_extract
 
 function getvalue(A::AbstractArray, i::Int, j::Int)
-  cols = repeat([:], ndims(A) - 2)
+  cols = ntuple(_ -> Colon(), ndims(A) - 2)
   A[i, j, cols...]
 end
 
 getvalue(A::AbstractArray, ij::Tuple) = getvalue(A, ij...)
-getvalue(A::AbstractArray, ::Nothing) = ndims(A) == 2 ? NaN : fill(NaN, size(A)[3:end])
+function getvalue(A::AbstractArray{T}, ::Nothing) where {T}
+  nodata = float(T)(NaN)
+  ndims(A) == 2 ? nodata : fill(nodata, size(A)[3:end])
+end
 
 ## TODO: `_rm_empty`让情况变得复杂
 function _rm_empty(x::Vector)

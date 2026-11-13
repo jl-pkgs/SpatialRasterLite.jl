@@ -19,9 +19,9 @@ SpatArchGDALExt = "ArchGDAL"
 
 [compat]
 Dates = "1.11.0"
-DocStringExtensions = "0.9"
+DocStringExtensions = "0.9, 0.10"
 NaNStatistics = "0.6.53"
-Parameters = "0.12.3"
+Parameters = "0.12, 0.13"
 ProgressMeter = "1.10.4"
 Random = "1.11.0"
 Statistics = "1.11.1"

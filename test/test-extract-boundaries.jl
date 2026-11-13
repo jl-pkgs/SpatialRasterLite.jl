@@ -41,3 +41,27 @@
   geographic = rast(reshape(1:48, 8, 6), bbox(110.7, 32.2, 110.72, 32.215))
   @test st_extract(geographic, (110.7025, 32.202500000000001)) == 41
 end
+
+@testset "extraction types and thin rasters" begin
+  for T in (Float16, Float32, Float64, Int), bands in (1, 2)
+    ra = rast(ones(T, 3, 3, bands), bbox(0, 0, 3, 3))
+    @test eltype(st_extract(ra, [(0.5, 2.5)]).value) === T
+    result = st_extract(ra, [(0.5, 2.5), (4.0, 4.0)])
+    @test eltype(result.value) === float(T)
+    @test all(==(one(T)), result.value[:, 1])
+    @test all(isnan, result.value[:, 2])
+    nodata = st_extract(ra, (4.0, 4.0))
+    @test eltype(nodata) === float(T)
+    @test all(isnan, nodata)
+  end
+
+  for dims in ((1, 1), (1, 3), (3, 1))
+    ra = rast(reshape(1:prod(dims), dims), bbox(0, 0, 3, 3))
+    points = [(x, y) for y in ra.lat for x in ra.lon]
+    @test vec(st_extract(ra, points).value) == vec(ra.A)
+    @test [st_extract(ra, p) for p in points] == vec(ra.A)
+    @test st_extract(ra, (0.0, 3.0)) == first(ra.A)
+    @test st_extract(ra, (3.0, 0.0)) == last(ra.A)
+    @test isnan(st_extract(ra, (4.0, 4.0)))
+  end
+end

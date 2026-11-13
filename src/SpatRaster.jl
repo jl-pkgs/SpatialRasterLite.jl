@@ -186,7 +186,7 @@ end
 
 function RasterSize(ra::SpatRaster)
   b = st_bbox(ra)
-  cellsize = st_cellsize(ra)
+  cellsize = ra.cellsize
   lon, lat = st_dims(ra)
   nx, ny = length(lon), length(lat)
   RasterSize(; b, cellsize, nx, ny)
